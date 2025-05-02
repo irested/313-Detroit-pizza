@@ -2,5 +2,42 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Flowbite */
-@import "flowbite";
+@import url('https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Bowlby+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+
+.cta {
+  -webkit-clip-path: polygon(0 0%, 100% .1em, calc(100% - .3em) calc(100% - .2em), .15em 100%);
+  clip-path: polygon(0 0%, 100% .1em, calc(100% - .3em) calc(100% - .2em), .15em 100%);
+  box-shadow: 0px 10px 25px #C44536;
+}
+
+.cta:hover {
+  transform: scale(1.15) rotate(2deg);
+  box-shadow: 0px 15px 30px #C44536;
+  filter: brightness(1.2);
+}
+
+.card-3d {
+  transform-style: preserve-3d;
+  perspective: 1000px;
+  background-color: transparent;
+}
+
+.card-front,
+.card-back {
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+  transform-style: preserve-3d;
+}
+
+.card-back {
+  transform: rotateY(180deg);
+}
+
+.group:hover .card-front {
+  transform: rotateY(180deg);
+}
+
+.group:hover .card-back {
+  transform: rotateY(360deg);
+}

@@ -1,0 +1,30 @@
+<section class="w-full p-8 lg:p-16">
+  <!-- Title -->
+  <div class="mb-8">
+    <h2 class="text-3xl lg:text-4xl font-bowlby text-vertAccent flex items-center justify-center lg:justify-start space-x-2">
+      <span>🔥</span>
+      <span>Elles ont la côte</span>
+    </h2>
+  </div>
+
+  <!-- Cards -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
+    {% for pizza in menu %}
+      <div class="group relative w-full h-64 bg-white rounded-lg overflow-hidden cursor-pointer perspective card-3d">
+        <!-- Front of the Card -->
+        <div class="card-front absolute inset-0 bg-cover bg-center" 
+             style="background-image: url('https://placehold.co/600x400/png');">
+          <div class="absolute bottom-0 w-full bg-gradient-to-t from-black/70 to-transparent text-white text-center p-4">
+            <h3 class="text-lg font-bold">{{ pizza.name }}</h3>
+          </div>
+        </div>
+
+        <!-- Back of the Card -->
+        <div class="card-back absolute inset-0 bg-vertAccent text-white text-center p-4">
+          <h3 class="text-lg font-bold text-orange mb-2">{{ pizza.name }}</h3>
+          <p class="text-sm bg-white/20 p-2 rounded">{{ pizza.ingredients | join(', ') }}</p>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>

@@ -1,0 +1,94 @@
+[
+  {
+    "name": "Margherita",
+    "ingredients": ["Tomato Sauce", "Mozzarella", "Basil"],
+    "topSell": true,
+    "allergen": ["Dairy"],
+    "slug": "margherita",
+    "rank": 1
+  },
+  {
+    "name": "Pepperoni",
+    "ingredients": ["Tomato Sauce", "Mozzarella", "Pepperoni"],
+    "topSell": true,
+    "allergen": ["Dairy"],
+    "slug": "pepperoni",
+    "rank": 2
+  },
+  {
+    "name": "BBQ Chicken",
+    "ingredients": [
+      "BBQ Sauce",
+      "Mozzarella",
+      "Chicken",
+      "Red Onions",
+      "Cilantro"
+    ],
+    "topSell": true,
+    "allergen": ["Dairy"],
+    "slug": "bbq-chicken",
+    "rank": 3
+  },
+  {
+    "name": "Veggie Supreme",
+    "ingredients": [
+      "Tomato Sauce",
+      "Mozzarella",
+      "Bell Peppers",
+      "Olives",
+      "Mushrooms",
+      "Onions"
+    ],
+    "topSell": false,
+    "allergen": ["Dairy"],
+    "slug": "veggie-supreme",
+    "rank": 6
+  },
+  {
+    "name": "Hawaiian",
+    "ingredients": ["Tomato Sauce", "Mozzarella", "Ham", "Pineapple"],
+    "topSell": true,
+    "allergen": ["Dairy"],
+    "rank": 4
+  },
+  {
+    "name": "Meat Lovers",
+    "ingredients": [
+      "Tomato Sauce",
+      "Mozzarella",
+      "Pepperoni",
+      "Sausage",
+      "Bacon",
+      "Ham"
+    ],
+    "topSell": true,
+    "allergen": ["Dairy"],
+    "rank": 5
+  },
+  {
+    "name": "Four Cheese",
+    "ingredients": [
+      "Tomato Sauce",
+      "Mozzarella",
+      "Parmesan",
+      "Cheddar",
+      "Gorgonzola"
+    ],
+    "topSell": false,
+    "allergen": ["Dairy"],
+    "rank": 7
+  },
+  {
+    "name": "Spicy Jalapeño",
+    "ingredients": [
+      "Tomato Sauce",
+      "Mozzarella",
+      "Jalapeños",
+      "Pepperoni",
+      "Chili Flakes"
+    ],
+    "topSell": false,
+    "allergen": ["Dairy"],
+    "rank": 8
+  }
+]

@@ -1,11 +1,11 @@
 {
   "name": "foodtruck-site",
   "version": "1.0.0",
-  "main": "index.js",
+  "main": ".eleventy.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "npx @11ty/eleventy --serve",
-    "build": "npx @11ty/eleventy"
+    "start": "concurrently \"npx tailwindcss -i ./src/css/styles.css -o ./_site/css/tailwind.css --watch\" \"npx @11ty/eleventy --serve\"",
+    "build": "npx tailwindcss -i ./src/css/styles.css -o ./_site/css/tailwind.css && npx @11ty/eleventy"
   },
   "keywords": [],
   "author": "",
@@ -13,11 +13,11 @@
   "description": "",
   "dependencies": {
     "@11ty/eleventy": "^3.0.0",
-    "decap-cms": "^3.6.2",
-    "flowbite": "^3.1.2"
+    "@tailwindcss/postcss": "^4.1.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.21",
+    "concurrently": "^9.1.2",
     "postcss": "^8.5.3",
     "tailwindcss": "^3.4.17"
   }
