@@ -1,0 +1,63 @@
+<section class="w-full p-8 lg:p-16">
+  <!-- Title -->
+  <div class="mb-8">
+    <h2 class="text-3xl lg:text-4xl font-bowlby text-vertAccent flex items-center justify-center lg:justify-start space-x-2">
+      <span>📍</span>
+      <span>Localisation</span>
+    </h2>
+  </div>
+
+  <div class="flex flex-col lg:flex-row gap-8">
+    <!-- Left Column - Table -->
+    <div class="lg:w-1/2">
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+        <table class="w-full">
+          <thead class="bg-vert text-white">
+            <tr>
+              <th class="py-3 px-4 text-left">Jour</th>
+              <th class="py-3 px-4 text-left">Lieu</th>
+              <th class="py-3 px-4 text-left">Horaires</th>
+            </tr>
+          </thead>
+          <tbody>
+            {% for loc in localisation %}
+              <tr class="border-b {% if loc.dayNumber == today %} bg-orange/20 {% endif %}">
+                <td class="py-3 px-4">{{ loc.day }}</td>
+                <td class="py-3 px-4">{{ loc.place }}</td>
+                <td class="py-3 px-4">17h45 - 21h30</td>
+              </tr>
+            {% endfor %}
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Right Column - Map -->
+    <div class="lg:w-1/2 flex flex-col">
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+        {% set today = today | default(0) %}
+        {% set currentLocation = localisation | find("dayNumber", today) %}
+        {% if currentLocation %}
+          <div class="h-96">
+            <iframe 
+              src="{{ currentLocation.mapUrl }}"
+              class="w-full h-full border-0"
+              frameborder="0"
+              scrolling="no">
+            </iframe>
+          </div>
+          <div class="p-4 space-y-2">
+            <a href="geo:{{ currentLocation.lat }},{{ currentLocation.lon }}" 
+               class="block w-full text-center py-3 px-6 bg-orange text-white font-blackHan rounded-sm hover:bg-orange/90 transition-colors">
+              M'Y RENDRE
+            </a>
+          </div>
+        {% else %}
+          <div class="flex items-center justify-center h-96 text-gray-500">
+            Pas de localisation aujourd'hui
+          </div>
+        {% endif %}
+      </div>
+    </div>
+  </div>
+</section>

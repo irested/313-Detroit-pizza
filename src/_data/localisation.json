@@ -1,0 +1,50 @@
+[
+  {
+    "day": "Lundi",
+    "place": "Villers-sire-nicole",
+    "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=4.010649,50.337553,4.014649,50.341553&layer=mapnik&marker=50.339553,4.012649",
+    "lat": "50.339553",
+    "lon": "4.012649",
+    "dayNumber": 1
+  },
+  {
+    "day": "Mercredi",
+    "place": "La longueville",
+    "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=3.854512,50.288510,3.858512,50.292510&layer=mapnik&marker=50.290510,3.856512",
+    "lat": "50.290510",
+    "lon": "3.856512",
+    "dayNumber": 3
+  },
+  {
+    "day": "Jeudi",
+    "place": "Élesmes",
+    "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=4.008010,50.304273,4.012010,50.308273&layer=mapnik&marker=50.306273,4.010010",
+    "lat": "50.306273",
+    "lon": "4.010010",
+    "dayNumber": 4
+  },
+  {
+    "day": "Vendredi",
+    "place": "Ferrière-la-petite",
+    "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=4.018025,50.236594,4.022025,50.240594&layer=mapnik&marker=50.238594,4.020025",
+    "lat": "50.238594",
+    "lon": "4.020025",
+    "dayNumber": 5
+  },
+  {
+    "day": "Samedi",
+    "place": "La longueville",
+    "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=3.854512,50.288510,3.858512,50.292510&layer=mapnik&marker=50.290510,3.856512",
+    "lat": "50.290510",
+    "lon": "3.856512",
+    "dayNumber": 6
+  },
+  {
+    "day": "Dimanche",
+    "place": "Colleret",
+    "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=4.018020,50.236594,4.022020,50.240594&layer=mapnik&marker=50.238594,4.020020",
+    "lat": "50.238594",
+    "lon": "4.020020",
+    "dayNumber": 0
+  }
+]

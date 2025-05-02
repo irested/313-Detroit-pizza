@@ -9,6 +9,16 @@ module.exports = function (eleventyConfig) {
   // Redirige la page index.md pour qu'elle soit générée à la racine
   eleventyConfig.addPassthroughCopy("src/pages/index.md");
 
+  // Add find filter
+  eleventyConfig.addFilter("find", function (array, key, value) {
+    return array.find((item) => item[key] === value);
+  });
+
+  // Add today's day number to global data
+  eleventyConfig.addGlobalData("today", () => {
+    return new Date().getDay();
+  });
+
   // Configuration du dossier d'entrée et de sortie
   return {
     dir: {
