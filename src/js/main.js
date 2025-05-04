@@ -50,20 +50,17 @@ function handleNavigationClick(event, lat, lon) {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   if (isMobile) {
-    // Try native apps on mobile
-    const urls = {
-      geo: `geo:${lat},${lon}`,
-      google: `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`,
-      waze: `https://waze.com/ul?ll=${lat},${lon}&navigate=yes`,
-    };
+    // Try to open in native maps app first with geo URI scheme
+    const geoUrl = `geo:${lat},${lon}`;
+    window.location.href = geoUrl;
 
-    window.location.href = urls.geo;
-
+    // Fallback to Google Maps after a short delay if geo URI failed
     setTimeout(() => {
-      window.location.href = urls.google;
-    }, 500);
+      const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
+      window.location.href = googleMapsUrl;
+    }, 2000);
   } else {
-    // Open Google Maps in new tab for desktop
+    // Desktop: open in new tab
     window.open(
       `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`,
       "_blank",
