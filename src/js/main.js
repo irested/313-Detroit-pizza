@@ -52,25 +52,36 @@ document.addEventListener("DOMContentLoaded", () => {
 function handleNavigationClick(event, lat, lon) {
   event.preventDefault();
 
-  // Check if mobile device
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  // Check if mobile device and detect platform
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+  const isAndroid = /android/i.test(userAgent);
 
-  if (isMobile) {
-    // Create URLs for different navigation apps
-    const wazeUrl = `https://waze.com/ul?ll=${lat},${lon}&navigate=yes`;
-    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`;
+  if (isIOS || isAndroid) {
+    // Use geo: URI scheme which triggers system app chooser
+    const geoUrl = `geo:${lat},${lon}?q=${lat},${lon}`;
 
-    // Try to open in Waze first (since it works better)
-    window.location.href = wazeUrl;
-
-    // Fallback to Google Maps after a delay if Waze didn't open
-    setTimeout(() => {
-      window.location.href = googleMapsUrl;
-    }, 2000);
+    // Create fallback chain using Promise
+    new Promise((resolve) => {
+      // Try geo URI first
+      window.location.href = geoUrl;
+      setTimeout(resolve, 2000);
+    }).then(() => {
+      // If geo URI fails, try platform specific URIs
+      if (isIOS) {
+        window.location.href = `maps://?q=${lat},${lon}`;
+      } else {
+        window.location.href = `google.navigation:q=${lat},${lon}`;
+      }
+      // Final fallback to web Google Maps
+      setTimeout(() => {
+        window.location.href = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=driving`;
+      }, 2000);
+    });
   } else {
-    // Desktop: open Google Maps in new tab with search query
+    // Desktop: open in new tab
     window.open(
-      `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`,
+      `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`,
       "_blank",
       "noopener,noreferrer"
     );

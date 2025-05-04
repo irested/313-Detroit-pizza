@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
           navbar.classList.add("-translate-y-full");
           // Close burger menu if open
           navbarSticky?.classList.add("hidden");
+          burgerMenuButton?.classList.remove("active"); // Add this line to remove active state
         } else if (currentScrollY < lastScrollY - 10) {
           navbar.classList.remove("-translate-y-full");
         }
