@@ -3,40 +3,27 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
   const navbarSticky = document.getElementById("navbar-sticky");
   const burgerMenuButton = document.querySelector("[data-collapse-toggle]");
-  const scrollThreshold = 75; // Number of pixels to trigger the sticky effect
-  let isSticky = false;
-  let isScrollingDown = false;
+  const scrollThreshold = 75;
 
   // Navbar scroll behavior
   if (navbar) {
     window.addEventListener("scroll", () => {
       const currentScrollY = window.scrollY;
 
-      // Add sticky class and background when scrolling past the threshold
+      // Add sticky class when scrolling past threshold
       if (currentScrollY > scrollThreshold) {
-        if (!isSticky) {
-          navbar.classList.add("bg-bgColor", "fixed", "z-20", "shadow-md");
-          isSticky = true;
-        }
+        navbar.classList.add("bg-bgColor", "fixed", "z-20", "shadow-md");
 
-        // Slide out when scrolling down
-        if (currentScrollY > lastScrollY && !isScrollingDown) {
+        // Hide navbar on scroll down, show on scroll up
+        if (currentScrollY > lastScrollY + 10) {
           navbar.classList.add("-translate-y-full");
-          isScrollingDown = true;
-
-          // Close the burger menu if open
-          if (navbarSticky && !navbarSticky.classList.contains("hidden")) {
-            navbarSticky.classList.add("hidden");
-          }
-        }
-
-        // Slide in when scrolling up
-        if (currentScrollY < lastScrollY && isScrollingDown) {
+          // Close burger menu if open
+          navbarSticky?.classList.add("hidden");
+        } else if (currentScrollY < lastScrollY - 10) {
           navbar.classList.remove("-translate-y-full");
-          isScrollingDown = false;
         }
       } else {
-        // Remove sticky class and background when at the top
+        // Remove all classes at top
         navbar.classList.remove(
           "bg-bgColor",
           "fixed",
@@ -44,22 +31,41 @@ document.addEventListener("DOMContentLoaded", () => {
           "shadow-md",
           "-translate-y-full"
         );
-        isSticky = false;
-
-        // Close the burger menu if open
-        if (navbarSticky && !navbarSticky.classList.contains("hidden")) {
-          navbarSticky.classList.add("hidden");
-        }
       }
 
       lastScrollY = currentScrollY;
     });
   }
 
-  // Burger menu toggle functionality
-  if (burgerMenuButton && navbarSticky) {
-    burgerMenuButton.addEventListener("click", () => {
-      navbarSticky.classList.toggle("hidden");
-    });
-  }
+  // Burger menu toggle
+  burgerMenuButton?.addEventListener("click", () => {
+    navbarSticky?.classList.toggle("hidden");
+  });
 });
+
+function handleNavigationClick(event, lat, lon) {
+  event.preventDefault();
+
+  // Create URLs for different navigation apps
+  const urls = {
+    geo: `geo:${lat},${lon}`,
+    google: `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`,
+    waze: `https://waze.com/ul?ll=${lat},${lon}&navigate=yes`,
+    apple: `maps://maps.apple.com/?daddr=${lat},${lon}`,
+  };
+
+  // Try opening with native geo: protocol first
+  window.location.href = urls.geo;
+
+  // Fallback options after a short delay
+  setTimeout(() => {
+    // Check if user is on mobile
+    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
+      // If on mobile, let the OS handle the deep linking
+      window.location.href = urls.google;
+    } else {
+      // If on desktop, open in new tab
+      window.open(urls.google, "_blank");
+    }
+  }, 500);
+}

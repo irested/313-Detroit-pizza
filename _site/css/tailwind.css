@@ -782,8 +782,8 @@ video {
   height: 16rem;
 }
 
-.h-96 {
-  height: 24rem;
+.h-\[400px\] {
+  height: 400px;
 }
 
 .h-full {
@@ -982,6 +982,12 @@ video {
   margin-bottom: calc(1.5rem * var(--tw-space-y-reverse));
 }
 
+.divide-y > :not([hidden]) ~ :not([hidden]) {
+  --tw-divide-y-reverse: 0;
+  border-top-width: calc(1px * calc(1 - var(--tw-divide-y-reverse)));
+  border-bottom-width: calc(1px * var(--tw-divide-y-reverse));
+}
+
 .overflow-hidden {
   overflow: hidden;
 }
@@ -1014,10 +1020,6 @@ video {
 
 .border-0 {
   border-width: 0px;
-}
-
-.border-b {
-  border-bottom-width: 1px;
 }
 
 .border-bgColor {
@@ -1077,10 +1079,6 @@ video {
 .bg-orange {
   --tw-bg-opacity: 1;
   background-color: rgb(196 69 54 / var(--tw-bg-opacity, 1));
-}
-
-.bg-orange\/20 {
-  background-color: rgb(196 69 54 / 0.2);
 }
 
 .bg-vert {
@@ -1193,6 +1191,11 @@ video {
   padding-bottom: 0.75rem;
 }
 
+.py-5 {
+  padding-top: 1.25rem;
+  padding-bottom: 1.25rem;
+}
+
 .py-6 {
   padding-top: 1.5rem;
   padding-bottom: 1.5rem;
@@ -1231,6 +1234,11 @@ video {
 .text-5xl {
   font-size: 3rem;
   line-height: 1;
+}
+
+.text-base {
+  font-size: 1rem;
+  line-height: 1.5rem;
 }
 
 .text-lg {
@@ -1645,6 +1653,10 @@ video {
     height: 120%;
   }
 
+  .lg\:h-\[500px\] {
+    height: 500px;
+  }
+
   .lg\:w-1\/2 {
     width: 50%;
   }
@@ -1705,6 +1717,11 @@ video {
   .lg\:text-4xl {
     font-size: 2.25rem;
     line-height: 2.5rem;
+  }
+
+  .lg\:text-lg {
+    font-size: 1.125rem;
+    line-height: 1.75rem;
   }
 
   .lg\:text-xl {

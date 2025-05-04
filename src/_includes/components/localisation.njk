@@ -10,21 +10,21 @@
   <div class="flex flex-col lg:flex-row gap-8">
     <!-- Left Column - Table -->
     <div class="lg:w-1/2">
-      <div class="bg-white rounded-lg overflow-hidden shadow-lg">
-        <table class="w-full">
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg h-full flex flex-col">
+        <table class="w-full h-full">
           <thead class="bg-vert text-white">
             <tr>
-              <th class="py-3 px-4 text-left">Jour</th>
-              <th class="py-3 px-4 text-left">Lieu</th>
-              <th class="py-3 px-4 text-left">Horaires</th>
+              <th class="py-3 px-4 text-left text-base lg:text-xl">Jour</th>
+              <th class="py-3 px-4 text-left text-base lg:text-xl">Lieu</th>
+              <th class="py-3 px-4 text-left text-base lg:text-xl">Horaires</th>
             </tr>
           </thead>
-          <tbody>
+          <tbody class="divide-y">
             {% for loc in localisation %}
-              <tr class="border-b {% if loc.dayNumber == today %} bg-orange/20 {% endif %}">
-                <td class="py-3 px-4">{{ loc.day }}</td>
-                <td class="py-3 px-4">{{ loc.place }}</td>
-                <td class="py-3 px-4">17h45 - 21h30</td>
+              <tr class="{% if loc.dayNumber == today %} bg-orange text-white {% endif %} {% if loc.closed %} text-gray-400 {% endif %}">
+                <td class="py-5 px-4 text-base lg:text-lg">{{ loc.day }}</td>
+                <td class="py-5 px-4 text-base lg:text-lg">{{ loc.place }}</td>
+                <td class="py-5 px-4 text-base lg:text-lg">{% if loc.closed %}Fermé{% else %}17h45 - 21h30{% endif %}</td>
               </tr>
             {% endfor %}
           </tbody>
@@ -33,12 +33,12 @@
     </div>
 
     <!-- Right Column - Map -->
-    <div class="lg:w-1/2 flex flex-col">
-      <div class="bg-white rounded-lg overflow-hidden shadow-lg">
+    <div class="lg:w-1/2">
+      <div class="bg-white rounded-lg overflow-hidden shadow-lg h-full">
         {% set today = today | default(0) %}
         {% set currentLocation = localisation | find("dayNumber", today) %}
         {% if currentLocation %}
-          <div class="h-96">
+          <div class="h-[400px] lg:h-[500px]">
             <iframe 
               src="{{ currentLocation.mapUrl }}"
               class="w-full h-full border-0"
@@ -47,13 +47,14 @@
             </iframe>
           </div>
           <div class="p-4 space-y-2">
-            <a href="geo:{{ currentLocation.lat }},{{ currentLocation.lon }}" 
-               class="block w-full text-center py-3 px-6 bg-orange text-white font-blackHan rounded-sm hover:bg-orange/90 transition-colors">
+            <a href="comgooglemaps://?daddr={{ currentLocation.lat }},{{ currentLocation.lon }}&zoom=14&views=traffic" 
+               class="block w-full text-center py-3 px-6 bg-orange text-white font-blackHan text-lg lg:text-xl rounded-sm hover:bg-orange/90 transition-colors"
+               onclick="handleNavigationClick(event, '{{ currentLocation.lat }}', '{{ currentLocation.lon }}')">
               M'Y RENDRE
             </a>
           </div>
         {% else %}
-          <div class="flex items-center justify-center h-96 text-gray-500">
+          <div class="flex items-center justify-center h-[400px] lg:h-[500px] text-gray-500 text-lg lg:text-xl">
             Pas de localisation aujourd'hui
           </div>
         {% endif %}

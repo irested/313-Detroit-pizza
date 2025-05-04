@@ -8,6 +8,15 @@
     "dayNumber": 1
   },
   {
+    "day": "Mardi",
+    "place": "Fermé",
+    "mapUrl": "",
+    "lat": "",
+    "lon": "",
+    "dayNumber": 2,
+    "closed": true
+  },
+  {
     "day": "Mercredi",
     "place": "La longueville",
     "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=3.854512,50.288510,3.858512,50.292510&layer=mapnik&marker=50.290510,3.856512",
