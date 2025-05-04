@@ -46,26 +46,28 @@ document.addEventListener("DOMContentLoaded", () => {
 function handleNavigationClick(event, lat, lon) {
   event.preventDefault();
 
-  // Create URLs for different navigation apps
-  const urls = {
-    geo: `geo:${lat},${lon}`,
-    google: `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`,
-    waze: `https://waze.com/ul?ll=${lat},${lon}&navigate=yes`,
-    apple: `maps://maps.apple.com/?daddr=${lat},${lon}`,
-  };
+  // Check if mobile device
+  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
-  // Try opening with native geo: protocol first
-  window.location.href = urls.geo;
+  if (isMobile) {
+    // Try native apps on mobile
+    const urls = {
+      geo: `geo:${lat},${lon}`,
+      google: `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`,
+      waze: `https://waze.com/ul?ll=${lat},${lon}&navigate=yes`,
+    };
 
-  // Fallback options after a short delay
-  setTimeout(() => {
-    // Check if user is on mobile
-    if (/iPhone|iPad|iPod|Android/i.test(navigator.userAgent)) {
-      // If on mobile, let the OS handle the deep linking
+    window.location.href = urls.geo;
+
+    setTimeout(() => {
       window.location.href = urls.google;
-    } else {
-      // If on desktop, open in new tab
-      window.open(urls.google, "_blank");
-    }
-  }, 500);
+    }, 500);
+  } else {
+    // Open Google Maps in new tab for desktop
+    window.open(
+      `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`,
+      "_blank",
+      "noopener,noreferrer"
+    );
+  }
 }
