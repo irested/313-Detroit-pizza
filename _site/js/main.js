@@ -43,6 +43,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Burger menu toggle
   burgerMenuButton?.addEventListener("click", () => {
+    burgerMenuButton.classList.toggle("active");
     navbarSticky?.classList.toggle("hidden");
   });
 });

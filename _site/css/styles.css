@@ -41,3 +41,20 @@
 .group:hover .card-back {
   transform: rotateY(360deg);
 }
+
+/* Hamburger Menu Animation */
+.hamburger-line {
+  @apply block h-0.5 w-full bg-vert transition-all duration-300 ease-in-out;
+}
+
+.hamburger.active .hamburger-line:nth-child(1) {
+  @apply translate-y-2 rotate-45;
+}
+
+.hamburger.active .hamburger-line:nth-child(2) {
+  @apply opacity-0;
+}
+
+.hamburger.active .hamburger-line:nth-child(3) {
+  @apply -translate-y-2 -rotate-45;
+}

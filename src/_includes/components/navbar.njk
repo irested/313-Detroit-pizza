@@ -8,11 +8,13 @@
     <!-- Button and Burger Menu -->
     <div class="flex items-center lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse">
       <button type="button" class="cta font-blackHan text-white bg-orange font-medium rounded-sm text-sm sm:text-xl px-4 py-2 sm:px-5 sm:py-3 text-center">COMMANDER</button>
-      <button data-collapse-toggle="navbar-sticky" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-vert rounded-lg lg:hidden focus:outline-none">
+      <button data-collapse-toggle="navbar-sticky" type="button" class="hamburger inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-vert rounded-lg lg:hidden focus:outline-none">
         <span class="sr-only">Open main menu</span>
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-          <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
+        <div class="flex flex-col gap-1.5 w-6">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </div>
       </button>
     </div>
 
