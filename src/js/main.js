@@ -3,7 +3,9 @@ document.addEventListener("DOMContentLoaded", () => {
   const navbar = document.getElementById("navbar");
   const navbarSticky = document.getElementById("navbar-sticky");
   const burgerMenuButton = document.querySelector("[data-collapse-toggle]");
+  const hero = document.querySelector("#hero");
   const scrollThreshold = 75;
+  const navbarHeight = navbar?.offsetHeight || 0;
 
   // Navbar scroll behavior
   if (navbar) {
@@ -13,6 +15,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Add sticky class when scrolling past threshold
       if (currentScrollY > scrollThreshold) {
         navbar.classList.add("bg-bgColor", "fixed", "z-20", "shadow-md");
+        if (hero) hero.style.marginTop = `${navbarHeight}px`;
 
         // Hide navbar on scroll down, show on scroll up
         if (currentScrollY > lastScrollY + 10) {
@@ -31,6 +34,7 @@ document.addEventListener("DOMContentLoaded", () => {
           "shadow-md",
           "-translate-y-full"
         );
+        if (hero) hero.style.marginTop = "0px";
       }
 
       lastScrollY = currentScrollY;
