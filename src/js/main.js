@@ -22,6 +22,7 @@ document.addEventListener("DOMContentLoaded", () => {
           navbar.classList.add("-translate-y-full");
           // Close burger menu if open
           navbarSticky?.classList.add("hidden");
+          burgerMenuButton?.classList.remove("active"); // Add this line to remove active state
         } else if (currentScrollY < lastScrollY - 10) {
           navbar.classList.remove("-translate-y-full");
         }
@@ -55,19 +56,21 @@ function handleNavigationClick(event, lat, lon) {
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
 
   if (isMobile) {
-    // Try to open in native maps app first with geo URI scheme
-    const geoUrl = `geo:${lat},${lon}`;
-    window.location.href = geoUrl;
+    // Create URLs for different navigation apps
+    const wazeUrl = `https://waze.com/ul?ll=${lat},${lon}&navigate=yes`;
+    const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`;
 
-    // Fallback to Google Maps after a short delay if geo URI failed
+    // Try to open in Waze first (since it works better)
+    window.location.href = wazeUrl;
+
+    // Fallback to Google Maps after a delay if Waze didn't open
     setTimeout(() => {
-      const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
       window.location.href = googleMapsUrl;
     }, 2000);
   } else {
-    // Desktop: open in new tab
+    // Desktop: open Google Maps in new tab with search query
     window.open(
-      `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`,
+      `https://www.google.com/maps/search/?api=1&query=${lat},${lon}`,
       "_blank",
       "noopener,noreferrer"
     );
