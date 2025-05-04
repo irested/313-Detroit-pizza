@@ -58,26 +58,13 @@ function handleNavigationClick(event, lat, lon) {
   const isAndroid = /android/i.test(userAgent);
 
   if (isIOS || isAndroid) {
-    // Use geo: URI scheme which triggers system app chooser
-    const geoUrl = `geo:${lat},${lon}?q=${lat},${lon}`;
-
-    // Create fallback chain using Promise
-    new Promise((resolve) => {
-      // Try geo URI first
-      window.location.href = geoUrl;
-      setTimeout(resolve, 2000);
-    }).then(() => {
-      // If geo URI fails, try platform specific URIs
-      if (isIOS) {
-        window.location.href = `maps://?q=${lat},${lon}`;
-      } else {
-        window.location.href = `google.navigation:q=${lat},${lon}`;
-      }
-      // Final fallback to web Google Maps
-      setTimeout(() => {
-        window.location.href = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}&travelmode=driving`;
-      }, 2000);
-    });
+    if (isIOS) {
+      // For iOS, use maps URL scheme that will show app chooser
+      window.location.href = `maps://?q=${lat},${lon}&dirflg=d`;
+    } else {
+      // For Android, use geo URI scheme that will show app chooser
+      window.location.href = `geo:${lat},${lon}?q=${lat},${lon}`;
+    }
   } else {
     // Desktop: open in new tab
     window.open(

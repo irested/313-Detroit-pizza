@@ -52,19 +52,19 @@ document.addEventListener("DOMContentLoaded", () => {
 function handleNavigationClick(event, lat, lon) {
   event.preventDefault();
 
-  // Check if mobile device
-  const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+  // Check if mobile device and detect platform
+  const userAgent = navigator.userAgent || navigator.vendor || window.opera;
+  const isIOS = /iPad|iPhone|iPod/.test(userAgent) && !window.MSStream;
+  const isAndroid = /android/i.test(userAgent);
 
-  if (isMobile) {
-    // Try to open in native maps app first with geo URI scheme
-    const geoUrl = `geo:${lat},${lon}`;
-    window.location.href = geoUrl;
-
-    // Fallback to Google Maps after a short delay if geo URI failed
-    setTimeout(() => {
-      const googleMapsUrl = `https://www.google.com/maps/dir/?api=1&destination=${lat},${lon}`;
-      window.location.href = googleMapsUrl;
-    }, 2000);
+  if (isIOS || isAndroid) {
+    if (isIOS) {
+      // For iOS, use maps URL scheme that will show app chooser
+      window.location.href = `maps://?q=${lat},${lon}&dirflg=d`;
+    } else {
+      // For Android, use geo URI scheme that will show app chooser
+      window.location.href = `geo:${lat},${lon}?q=${lat},${lon}`;
+    }
   } else {
     // Desktop: open in new tab
     window.open(
