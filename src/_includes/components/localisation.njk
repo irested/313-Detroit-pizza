@@ -1,4 +1,4 @@
-<section class="w-full p-8 lg:p-16">
+<section id="localisation" class="w-full p-8 lg:p-16">
   <!-- Title -->
   <div class="mb-8">
     <h2 class="text-2xl sm:text-3xl lg:text-4xl font-bowlby text-vertAccent flex items-center justify-center lg:justify-start space-x-2">
@@ -42,6 +42,7 @@
             <iframe 
               src="{{ currentLocation.mapUrl }}"
               class="w-full h-full border-0"
+              loading="lazy"
               frameborder="0"
               scrolling="no">
             </iframe>

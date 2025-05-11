@@ -47,7 +47,95 @@ document.addEventListener("DOMContentLoaded", () => {
     burgerMenuButton.classList.toggle("active");
     navbarSticky?.classList.toggle("hidden");
   });
+
+  // Separate page navigation from section navigation
+  const isHomePage = window.location.pathname === "/";
+  const navManager = isHomePage ? initSectionNav() : initPageNav();
+
+  handleSectionLinks();
+
+  // Initial active state
+  updateActiveLink(window.location.pathname);
+
+  // Handle hash changes
+  window.addEventListener("hashchange", () => {
+    updateActiveLink(window.location.pathname);
+  });
+
+  // Initialize float animation
+  initFloatAnimation();
 });
+
+function initFloatAnimation() {
+  const floatingElements = document.querySelectorAll(".animate-float");
+
+  floatingElements.forEach((element) => {
+    if (element) {
+      requestAnimationFrame(() => {
+        element.classList.add("float-start");
+      });
+    }
+  });
+}
+
+function initSectionNav() {
+  const sections = document.querySelectorAll("section[id]");
+
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          const sectionId = entry.target.id;
+          // Update URL hash
+          window.history.replaceState(null, null, `#${sectionId}`);
+          updateActiveLink(sectionId);
+        }
+      });
+    },
+    {
+      threshold: 0.5,
+      rootMargin: "-50% 0px -50% 0px",
+    }
+  );
+
+  sections.forEach((section) => observer.observe(section));
+}
+
+function initPageNav() {
+  const currentPath = window.location.pathname;
+  updateActiveLink(currentPath);
+  return { type: "page" };
+}
+
+function updateActiveLink(identifier) {
+  const navLinks = document.querySelectorAll(".nav-link");
+  const currentPath = window.location.pathname;
+  const currentHash = window.location.hash;
+
+  navLinks.forEach((link) => {
+    link.classList.remove("text-vertAccent");
+
+    // Handle menu page
+    if (currentPath === "/menu/" && link.getAttribute("data-page") === "menu") {
+      link.classList.add("text-vertAccent");
+      return;
+    }
+
+    // Handle home page and sections
+    if (currentPath === "/" || currentPath === "") {
+      if (currentHash) {
+        // If there's a hash, highlight section link
+        const sectionId = currentHash.replace("#", "");
+        if (link.getAttribute("data-section") === sectionId) {
+          link.classList.add("text-vertAccent");
+        }
+      } else if (link.getAttribute("data-page") === "home") {
+        // If no hash and we're on home, highlight home link
+        link.classList.add("text-vertAccent");
+      }
+    }
+  });
+}
 
 function handleNavigationClick(event, lat, lon) {
   event.preventDefault();
@@ -73,4 +161,66 @@ function handleNavigationClick(event, lat, lon) {
       "noopener,noreferrer"
     );
   }
+}
+
+// Add this function after your existing code
+function handleSectionLinks() {
+  const sectionLinks = document.querySelectorAll(".nav-link[data-section]");
+  const homeLink = document.querySelector(".nav-link[data-page='home']");
+  const menuLink = document.querySelector(".nav-link[data-page='menu']");
+  const navbarSticky = document.getElementById("navbar-sticky");
+  const burgerMenuButton = document.querySelector("[data-collapse-toggle]");
+
+  // Function to close burger menu
+  const closeBurgerMenu = () => {
+    navbarSticky?.classList.add("hidden");
+    burgerMenuButton?.classList.remove("active");
+  };
+
+  // Handle home link click
+  if (homeLink) {
+    homeLink.addEventListener("click", (e) => {
+      if (window.location.pathname === "/") {
+        e.preventDefault();
+        window.scrollTo({ top: 0, behavior: "smooth" });
+        // Clear hash if any
+        if (window.location.hash) {
+          window.history.pushState(
+            "",
+            document.title,
+            window.location.pathname
+          );
+        }
+        updateActiveLink("/");
+      }
+      closeBurgerMenu();
+    });
+  }
+
+  // Handle menu link click
+  if (menuLink) {
+    menuLink.addEventListener("click", () => {
+      closeBurgerMenu();
+    });
+  }
+
+  // Handle section links
+  sectionLinks.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      if (window.location.pathname !== "/") {
+        return;
+      }
+
+      e.preventDefault();
+      const sectionId = link.getAttribute("data-section");
+      const section = document.getElementById(sectionId);
+
+      if (section) {
+        window.history.pushState({}, "", `#${sectionId}`);
+        section.scrollIntoView({ behavior: "smooth" });
+        updateActiveLink(sectionId);
+      }
+      closeBurgerMenu();
+    });
+  });
 }

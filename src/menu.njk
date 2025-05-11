@@ -1,6 +1,55 @@
 ---
-layout: layout.njk
-title: Home
+layout: "layout.njk"
+title: "313DSP-Menu"
+description: "Découvrez notre menu de pizzas artisanales, préparées avec des ingrédients frais et locaux. Commandez en ligne dès maintenant !"
+keywords: "menu, pizzas, artisanales, ingrédients frais, commande en ligne"
+image: "/img/pizza_hero.png"
 ---
 
-<h1>MENU PAGE</h1>
+<section class="w-full p-8 lg:p-16">
+  <!-- Title -->
+  <div class="mb-12">
+    <h1 class="text-3xl sm:text-4xl lg:text-5xl font-bowlby text-vertAccent text-center">
+      Notre Menu
+    </h1>
+  </div>
+
+  <!-- Menu Grid -->
+  <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {% for pizza in menu %}
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+      <div class="p-6">
+        <!-- Pizza Name -->
+        <h3 class="text-2xl font-bowlby text-vertAccent mb-4">
+          {{ pizza.name }}
+          {% if pizza.topSell %}
+          <span class="ml-2 inline-block bg-orange text-white text-sm px-2 py-1 rounded-full">
+            Populaire
+          </span>
+          {% endif %}
+        </h3>
+
+        <!-- Ingredients -->
+        <div class="space-y-2">
+          <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
+          <ul class="list-disc list-inside space-y-1 text-gray-700">
+            {% for ingredient in pizza.ingredients %}
+            <li>{{ ingredient }}</li>
+            {% endfor %}
+          </ul>
+        </div>
+
+        <!-- Allergens -->
+        {% if pizza.allergen %}
+        <div class="mt-4 pt-4 border-t border-gray-200">
+          <p class="text-sm text-gray-500">
+            <span class="font-bold">Allergènes:</span>
+            {{ pizza.allergen | join(", ") }}
+          </p>
+        </div>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</section>

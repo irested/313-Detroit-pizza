@@ -1,12 +1,15 @@
-
-
 <footer class="bg-vert">
     <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8">
         <div class="md:flex md:justify-between">
           <div class="mb-6 md:mb-0">
-              <a href="https://flowbite.com/" class="flex items-center">
-                  <img src="../../img/logo_footer.svg" class="me-3" alt="313 pizza logo" />
-              </a>
+            <a href="/" class="flex items-center">
+              {% image "./src/img/logo_footer.svg", 
+                "313 pizza logo",
+                [155],
+                "auto",
+                "max-h-[110px] max-w-[126.26px] sm:max-w-[137.75px] sm:max-h-[120px] lg:max-w-[154.96px] lg:max-h-[135px] me-3"
+              %}
+            </a>
           </div>
           <div class="grid grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
               <div>

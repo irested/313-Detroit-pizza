@@ -10,6 +10,7 @@
   <!-- Cards -->
   <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 gap-6">
     {% for pizza in menu %}
+      {% if pizza.topSell %}
       <div class="group relative w-full h-64 bg-white rounded-lg overflow-hidden cursor-pointer perspective card-3d">
         <!-- Front of the Card -->
         <div class="card-front absolute inset-0 bg-cover bg-center" 
@@ -20,11 +21,12 @@
         </div>
 
         <!-- Back of the Card -->
-        <div class="card-back absolute inset-0 bg-vertAccent text-white text-center p-4">
+        <div class="card-back absolute inset-0 bg-vert text-white text-center p-4">
           <h3 class="text-lg font-bold text-orange mb-2">{{ pizza.name }}</h3>
           <p class="text-sm bg-white/20 p-2 rounded">{{ pizza.ingredients | join(', ') }}</p>
         </div>
       </div>
+      {% endif %}
     {% endfor %}
   </div>
 </section>

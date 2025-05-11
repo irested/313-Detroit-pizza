@@ -21,7 +21,7 @@ module.exports = {
       },
       fontFamily: {
         blackHan: ["Black Han Sans", "sans-serif"], // Add Black Han Sans
-        bowlby: ['"Bowlby One"', "cursive"], // Add Bowlby One
+        bowlby: ['"Bowlby One"', "sans-serif"], // Add Bowlby One
         roboto: ["Roboto", "sans-serif"], // Add Roboto
       },
     },

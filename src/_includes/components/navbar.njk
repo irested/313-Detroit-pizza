@@ -1,8 +1,13 @@
 <nav id="navbar" class="w-full top-0 start-0 transition-transform duration-500">
   <div class="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
     <!-- Logo -->
-    <a href="#" class="flex items-center space-x-3 rtl:space-x-reverse">
-      <img src="../../img/logo_svg_xl.svg" class="max-h-[110px] sm:max-h-[120px] lg:max-h-[135px]" alt="Logo">
+    <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
+      {% image "./src/img/logo_svg_xl.svg", 
+        "Logo",
+        [155],
+        "155px",
+        "max-h-[110px] max-w-[126.26px] sm:max-w-[137.75px] sm:max-h-[120px] lg:max-w-[154.96px] lg:max-h-[135px]"
+      %}
     </a>
 
     <!-- Button and Burger Menu -->
@@ -22,16 +27,24 @@
     <div class="items-center justify-between hidden w-full lg:flex lg:w-auto lg:order-1" id="navbar-sticky">
       <ul class="flex flex-col p-4 lg:p-0 mt-4 font-bowlby lg:text-xl text-2xl rounded-lg bg-bgColor lg:space-x-8 rtl:space-x-reverse lg:flex-row lg:mt-0">
         <li class="first:mr-0 last:mr-0">
-          <a href="#" class="block py-2 px-3 text-vert hover:text-vertAccent">Accueil</a>
+          <a href="/" 
+             class="nav-link block py-2 px-3 text-vert hover:text-vertAccent {% if page.url == '/' %}text-vertAccent{% endif %}"
+             data-page="home">Accueil</a>
         </li>
         <li class="first:mr-0 last:mr-0">
-          <a href="#" class="block py-2 px-3 text-vert hover:text-vertAccent">Concept</a>
+          <a href="{% if page.url == '/' %}#concept{% else %}/#concept{% endif %}" 
+             class="nav-link block py-2 px-3 text-vert hover:text-vertAccent"
+             data-section="concept">Concept</a>
         </li>
         <li class="first:mr-0 last:mr-0">
-          <a href="#" class="block py-2 px-3 text-vert hover:text-vertAccent">Localisation</a>
+          <a href="{% if page.url == '/' %}#localisation{% else %}/#localisation{% endif %}" 
+             class="nav-link block py-2 px-3 text-vert hover:text-vertAccent"
+             data-section="localisation">Localisation</a>
         </li>
         <li class="first:mr-0 last:mr-0">
-          <a href="#" class="block py-2 px-3 text-vert hover:text-vertAccent">Menu</a>
+          <a href="/menu" 
+             class="nav-link block py-2 px-3 text-vert hover:text-vertAccent {% if page.url == '/menu/' %}text-vertAccent{% endif %}"
+             data-page="menu">Menu</a>
         </li>
       </ul>
     </div>

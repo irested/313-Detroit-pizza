@@ -1,9 +1,14 @@
-<section class="w-full p-8 lg:p-16">
+<section id="concept" class="w-full p-8 lg:p-16">
   <div class="flex flex-col lg:flex-row gap-8">
     <!-- Left Column -->
     <div class="lg:w-1/2 relative">
-      <div class="bg-vert p-8 rounded-lg flex items-center justify-center ">
-        <img src="../../img/food_truck.svg" alt="Food Truck Illustration" class="w-full max-w-md">
+      <div class="bg-vert p-8 rounded-lg flex items-center justify-center">
+        {% image "./src/img/food_truck.png", 
+          "Food Truck Illustration",
+          [448],
+          "448px",
+          "w-full h-auto max-h-[448px] max-w-[448px]"
+        %}
       </div>
     </div>
 
