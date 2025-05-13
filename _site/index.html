@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Découvrez 313 Detroit Style Pizza, votre food truck de pizzas détroit. Une expérience culinaire unique dans la région sambre avesnois.">
   <title>313DSP-Accueil</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,7 +24,9 @@
 
     <!-- Button and Burger Menu -->
     <div class="flex items-center lg:order-2 space-x-3 lg:space-x-0 rtl:space-x-reverse">
-      <button type="button" class="cta font-blackHan text-white bg-orange font-medium rounded-sm text-sm sm:text-xl px-4 py-2 sm:px-5 sm:py-3 text-center">COMMANDER</button>
+      <a href="/order" class="cta font-blackHan text-white bg-orange font-medium rounded-sm text-sm sm:text-xl px-4 py-2 sm:px-5 sm:py-3 text-center block">
+        COMMANDER
+      </a>
       <button data-collapse-toggle="navbar-sticky" type="button" class="hamburger inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-vert rounded-lg lg:hidden focus:outline-none">
         <span class="sr-only">Open main menu</span>
         <div class="flex flex-col gap-1.5 w-6">
@@ -71,8 +74,8 @@
     <h1 class="text-5xl leading-[3.5rem] sm:leading-[5rem] sm:text-6xl font-bowlby text-vertAccent">
       Une nouvelle expérience s'invite
     </h1> 
-    <button type="button" class="cta font-blackHan text-white bg-orange font-medium rounded-sm text-lg px-5 py-3">
-      <a href="/menu">VOIR LE MENU</a>
+    <button type="button">
+      <a href="/menu" class="cta font-blackHan text-white bg-orange font-medium rounded-sm text-lg px-5 py-3 block text-center">VOIR LE MENU</a>
     </button>
   </div>
 
@@ -300,7 +303,9 @@
             class="w-full h-full border-0"
             loading="lazy"
             frameborder="0"
-            scrolling="no">
+            scrolling="no"
+            title="Carte de localisation du food truck"
+            aria-label="Carte interactive montrant l'emplacement du food truck">
           </iframe>
         </div>
         <div class="p-4">
