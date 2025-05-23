@@ -64,6 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize float animation
   initFloatAnimation();
+  updateLocation();
 });
 
 function initFloatAnimation() {
@@ -76,6 +77,49 @@ function initFloatAnimation() {
       });
     }
   });
+}
+
+function updateLocation() {
+  const today = new Date().getDay(); // 0-6, where 0 is Sunday
+  const locationTable = document.getElementById("locationTable");
+  const locationMap = document.getElementById("locationMap");
+  const navigationButton = document.getElementById("navigationButton");
+
+  if (!locationTable || !locationMap || !navigationButton) return;
+
+  // Remove any existing active classes
+  locationTable.querySelectorAll("tr").forEach((row) => {
+    row.classList.remove("bg-orange", "text-white");
+  });
+
+  // Find today's row
+  const todayRow = locationTable.querySelector(`tr[data-day="${today}"]`);
+
+  if (todayRow) {
+    // Highlight today's row
+    todayRow.classList.add("bg-orange", "text-white");
+
+    // Update map
+    const mapUrl = todayRow.dataset.mapUrl;
+    locationMap.src = mapUrl;
+
+    // Update navigation button
+    const lat = todayRow.dataset.lat;
+    const lon = todayRow.dataset.lon;
+    navigationButton.onclick = (event) =>
+      handleNavigationClick(event, lat, lon);
+
+    // Show map container
+    document.getElementById("mapContainer").style.display = "block";
+  } else {
+    // Handle closed days
+    document.getElementById("mapContainer").innerHTML = `
+      <div class="flex items-center justify-center h-[400px] lg:h-[500px] text-gray-500 text-lg lg:text-xl">
+        Pas de localisation aujourd'hui
+      </div>
+    `;
+    navigationButton.style.display = "none";
+  }
 }
 
 function initSectionNav() {

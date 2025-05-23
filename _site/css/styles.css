@@ -90,3 +90,9 @@
     transform: none;
   }
 }
+
+@media (pointer: fine) {
+  html {
+    scroll-behavior: smooth;
+  }
+}

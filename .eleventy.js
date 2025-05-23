@@ -3,23 +3,37 @@ const Image = require("@11ty/eleventy-img");
 async function imageShortcode(
   src,
   alt,
-  widths = [300, 600, 900, 1200],
+  widths = [400],
   sizes = "100vw",
-  className = ""
+  className = "",
+  eager = false
 ) {
-  let metadata = await Image(src, {
-    widths: [...widths, null],
-    formats: ["webp", "jpeg", "svg"],
+  // Optimize image processing based on file type and location
+  const imageOptions = {
+    widths: [...widths],
+    formats: ["webp", "jpeg"],
     outputDir: "./_site/img/",
     urlPath: "/img/",
     svgShortCircuit: true,
-  });
+    filenameFormat: function (id, src, width, format) {
+      const extension = format === "jpeg" ? "jpg" : format;
+      return `${id}-${width}.${extension}`;
+    },
+  };
+
+  // For SVG files, don't process them
+  if (src.toLowerCase().endsWith(".svg")) {
+    imageOptions.formats = ["svg"];
+    imageOptions.svgShortCircuit = true;
+  }
+
+  let metadata = await Image(src, imageOptions);
 
   let imageAttributes = {
     alt,
     sizes,
-    loading: "lazy",
-    decoding: "async",
+    loading: eager ? "eager" : "lazy",
+    decoding: eager ? "sync" : "async",
     class: className,
   };
 

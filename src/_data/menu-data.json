@@ -5,7 +5,8 @@
     "topSell": true,
     "allergen": ["Dairy"],
     "slug": "margherita",
-    "rank": 1
+    "rank": 1,
+    "image": "/pizza/margherita.png"
   },
   {
     "name": "Pepperoni",
@@ -13,7 +14,8 @@
     "topSell": true,
     "allergen": ["Dairy"],
     "slug": "pepperoni",
-    "rank": 2
+    "rank": 2,
+    "image": "/pizza/pepperoni.png"
   },
   {
     "name": "BBQ Chicken",
@@ -28,7 +30,8 @@
     "topSell": true,
     "allergen": ["Dairy"],
     "slug": "bbq-chicken",
-    "rank": 3
+    "rank": 3,
+    "image": "/pizza/bbq-chicken.png"
   },
   {
     "name": "Veggie Supreme",
@@ -43,14 +46,16 @@
     "topSell": false,
     "allergen": ["Dairy"],
     "slug": "veggie-supreme",
-    "rank": 6
+    "rank": 6,
+    "image": "/pizza/veggie-supreme.png"
   },
   {
     "name": "Hawaiian",
     "ingredients": ["Tomato Sauce", "Mozzarella", "Ham", "Pineapple"],
     "topSell": true,
     "allergen": ["Dairy"],
-    "rank": 4
+    "rank": 4,
+    "image": "/pizza/hawaiian.png"
   },
   {
     "name": "Meat Lovers",
@@ -64,7 +69,8 @@
     ],
     "topSell": true,
     "allergen": ["Dairy"],
-    "rank": 5
+    "rank": 5,
+    "image": "/pizza/meat-lovers.png"
   },
   {
     "name": "Four Cheese",
@@ -77,7 +83,8 @@
     ],
     "topSell": false,
     "allergen": ["Dairy"],
-    "rank": 7
+    "rank": 7,
+    "image": "/pizza/four-cheese.png"
   },
   {
     "name": "Spicy Jalapeño",
@@ -90,6 +97,7 @@
     ],
     "topSell": false,
     "allergen": ["Dairy"],
-    "rank": 8
+    "rank": 8,
+    "image": "/pizza/spicy-jalapeno.png"
   }
 ]

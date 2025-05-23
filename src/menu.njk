@@ -18,6 +18,15 @@ image: "/img/pizza_hero.png"
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {% for pizza in menu %}
     <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+      <!-- Add Pizza Image -->
+      <div class="w-full h-48 overflow-hidden">
+        {% image "./src/img" + pizza.image, 
+          pizza.name,
+          [400],
+          "400px",
+          "w-full h-full object-cover"
+        %}
+      </div>
       <div class="p-6">
         <!-- Pizza Name -->
         <h3 class="text-2xl font-bowlby text-vertAccent mb-4">
