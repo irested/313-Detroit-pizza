@@ -17,7 +17,7 @@ image: "/img/pizza_hero.png"
   <!-- Menu Grid -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     {% for pizza in menu %}
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in flex flex-col h-full">
       <!-- Add Pizza Image -->
       <div class="w-full h-48 overflow-hidden">
         {% image "./src/img" + pizza.image, 
@@ -27,7 +27,7 @@ image: "/img/pizza_hero.png"
           "w-full h-full object-cover"
         %}
       </div>
-      <div class="p-6">
+      <div class="p-6 flex flex-col flex-1">
         <!-- Pizza Name -->
         <h3 class="text-2xl font-bowlby text-vertAccent mb-4">
           {{ pizza.name }}
@@ -38,25 +38,28 @@ image: "/img/pizza_hero.png"
           {% endif %}
         </h3>
 
-        <!-- Ingredients -->
-        <div class="space-y-2">
-          <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
-          <ul class="list-disc list-inside space-y-1 text-gray-700">
-            {% for ingredient in pizza.ingredients %}
-            <li>{{ ingredient }}</li>
-            {% endfor %}
-          </ul>
-        </div>
+        <!-- Ingredients & Allergens Container -->
+        <div class="flex flex-col justify-between h-full flex-1">
+          <!-- Ingredients -->
+          <div class="space-y-2">
+            <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
+            <ul class="list-disc list-inside space-y-1 text-gray-700">
+              {% for ingredient in pizza.ingredients %}
+              <li>{{ ingredient }}</li>
+              {% endfor %}
+            </ul>
+          </div>
 
-        <!-- Allergens -->
-        {% if pizza.allergen %}
-        <div class="mt-4 pt-4 border-t border-gray-200">
-          <p class="text-sm text-gray-500">
-            <span class="font-bold">Allergènes:</span>
-            {{ pizza.allergen | join(", ") }}
-          </p>
+          <!-- Allergens -->
+          {% if pizza.allergen %}
+          <div class="mt-4 pt-4 border-t border-gray-200">
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Allergènes:</span>
+              {{ pizza.allergen | join(", ") }}
+            </p>
+          </div>
+          {% endif %}
         </div>
-        {% endif %}
       </div>
     </div>
     {% endfor %}

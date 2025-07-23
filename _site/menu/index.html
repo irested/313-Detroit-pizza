@@ -80,12 +80,12 @@
   <!-- Menu Grid -->
   <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
     
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in flex flex-col h-full">
       <!-- Add Pizza Image -->
       <div class="w-full h-48 overflow-hidden">
         <picture><source type="image/webp" srcset="/img/_4aREKpV_L-400.webp 400w" sizes="400px"><img src="/img/_4aREKpV_L-400.jpg" alt="Margherita" loading="lazy" decoding="async" class="w-full h-full object-cover" width="400" height="266"></picture>
       </div>
-      <div class="p-6">
+      <div class="p-6 flex flex-col flex-1">
         <!-- Pizza Name -->
         <h3 class="text-2xl font-bowlby text-vertAccent mb-4">
           Margherita
@@ -96,38 +96,41 @@
           
         </h3>
 
-        <!-- Ingredients -->
-        <div class="space-y-2">
-          <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
-          <ul class="list-disc list-inside space-y-1 text-gray-700">
-            
-            <li>Tomato Sauce</li>
-            
-            <li>Mozzarella</li>
-            
-            <li>Basil</li>
-            
-          </ul>
-        </div>
+        <!-- Ingredients & Allergens Container -->
+        <div class="flex flex-col justify-between h-full flex-1">
+          <!-- Ingredients -->
+          <div class="space-y-2">
+            <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
+            <ul class="list-disc list-inside space-y-1 text-gray-700">
+              
+              <li>Tomato Sauce</li>
+              
+              <li>Mozzarella</li>
+              
+              <li>Basil</li>
+              
+            </ul>
+          </div>
 
-        <!-- Allergens -->
-        
-        <div class="mt-4 pt-4 border-t border-gray-200">
-          <p class="text-sm text-gray-500">
-            <span class="font-bold">Allergènes:</span>
-            Dairy
-          </p>
+          <!-- Allergens -->
+          
+          <div class="mt-4 pt-4 border-t border-gray-200">
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Allergènes:</span>
+              Dairy
+            </p>
+          </div>
+          
         </div>
-        
       </div>
     </div>
     
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in flex flex-col h-full">
       <!-- Add Pizza Image -->
       <div class="w-full h-48 overflow-hidden">
         <picture><source type="image/webp" srcset="/img/tZJ21lRaNH-400.webp 400w" sizes="400px"><img src="/img/tZJ21lRaNH-400.jpg" alt="Pepperoni" loading="lazy" decoding="async" class="w-full h-full object-cover" width="400" height="266"></picture>
       </div>
-      <div class="p-6">
+      <div class="p-6 flex flex-col flex-1">
         <!-- Pizza Name -->
         <h3 class="text-2xl font-bowlby text-vertAccent mb-4">
           Pepperoni
@@ -138,38 +141,41 @@
           
         </h3>
 
-        <!-- Ingredients -->
-        <div class="space-y-2">
-          <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
-          <ul class="list-disc list-inside space-y-1 text-gray-700">
-            
-            <li>Tomato Sauce</li>
-            
-            <li>Mozzarella</li>
-            
-            <li>Pepperoni</li>
-            
-          </ul>
-        </div>
+        <!-- Ingredients & Allergens Container -->
+        <div class="flex flex-col justify-between h-full flex-1">
+          <!-- Ingredients -->
+          <div class="space-y-2">
+            <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
+            <ul class="list-disc list-inside space-y-1 text-gray-700">
+              
+              <li>Tomato Sauce</li>
+              
+              <li>Mozzarella</li>
+              
+              <li>Pepperoni</li>
+              
+            </ul>
+          </div>
 
-        <!-- Allergens -->
-        
-        <div class="mt-4 pt-4 border-t border-gray-200">
-          <p class="text-sm text-gray-500">
-            <span class="font-bold">Allergènes:</span>
-            Dairy
-          </p>
+          <!-- Allergens -->
+          
+          <div class="mt-4 pt-4 border-t border-gray-200">
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Allergènes:</span>
+              Dairy
+            </p>
+          </div>
+          
         </div>
-        
       </div>
     </div>
     
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in flex flex-col h-full">
       <!-- Add Pizza Image -->
       <div class="w-full h-48 overflow-hidden">
         <picture><source type="image/webp" srcset="/img/9NzbMn1JvS-400.webp 400w" sizes="400px"><img src="/img/9NzbMn1JvS-400.jpg" alt="BBQ Chicken" loading="lazy" decoding="async" class="w-full h-full object-cover" width="400" height="266"></picture>
       </div>
-      <div class="p-6">
+      <div class="p-6 flex flex-col flex-1">
         <!-- Pizza Name -->
         <h3 class="text-2xl font-bowlby text-vertAccent mb-4">
           BBQ Chicken
@@ -180,88 +186,94 @@
           
         </h3>
 
-        <!-- Ingredients -->
-        <div class="space-y-2">
-          <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
-          <ul class="list-disc list-inside space-y-1 text-gray-700">
-            
-            <li>Tomato Sauce</li>
-            
-            <li>BBQ Sauce</li>
-            
-            <li>Mozzarella</li>
-            
-            <li>Chicken</li>
-            
-            <li>Red Onions</li>
-            
-            <li>Cilantro</li>
-            
-          </ul>
-        </div>
+        <!-- Ingredients & Allergens Container -->
+        <div class="flex flex-col justify-between h-full flex-1">
+          <!-- Ingredients -->
+          <div class="space-y-2">
+            <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
+            <ul class="list-disc list-inside space-y-1 text-gray-700">
+              
+              <li>Tomato Sauce</li>
+              
+              <li>BBQ Sauce</li>
+              
+              <li>Mozzarella</li>
+              
+              <li>Chicken</li>
+              
+              <li>Red Onions</li>
+              
+              <li>Cilantro</li>
+              
+            </ul>
+          </div>
 
-        <!-- Allergens -->
-        
-        <div class="mt-4 pt-4 border-t border-gray-200">
-          <p class="text-sm text-gray-500">
-            <span class="font-bold">Allergènes:</span>
-            Dairy
-          </p>
+          <!-- Allergens -->
+          
+          <div class="mt-4 pt-4 border-t border-gray-200">
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Allergènes:</span>
+              Dairy
+            </p>
+          </div>
+          
         </div>
-        
       </div>
     </div>
     
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in flex flex-col h-full">
       <!-- Add Pizza Image -->
       <div class="w-full h-48 overflow-hidden">
         <picture><source type="image/webp" srcset="/img/D0euVi2lVC-400.webp 400w" sizes="400px"><img src="/img/D0euVi2lVC-400.jpg" alt="Veggie Supreme" loading="lazy" decoding="async" class="w-full h-full object-cover" width="400" height="266"></picture>
       </div>
-      <div class="p-6">
+      <div class="p-6 flex flex-col flex-1">
         <!-- Pizza Name -->
         <h3 class="text-2xl font-bowlby text-vertAccent mb-4">
           Veggie Supreme
           
         </h3>
 
-        <!-- Ingredients -->
-        <div class="space-y-2">
-          <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
-          <ul class="list-disc list-inside space-y-1 text-gray-700">
-            
-            <li>Tomato Sauce</li>
-            
-            <li>Mozzarella</li>
-            
-            <li>Bell Peppers</li>
-            
-            <li>Olives</li>
-            
-            <li>Mushrooms</li>
-            
-            <li>Onions</li>
-            
-          </ul>
-        </div>
+        <!-- Ingredients & Allergens Container -->
+        <div class="flex flex-col justify-between h-full flex-1">
+          <!-- Ingredients -->
+          <div class="space-y-2">
+            <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
+            <ul class="list-disc list-inside space-y-1 text-gray-700">
+              
+              <li>Tomato Sauce</li>
+              
+              <li>Mozzarella</li>
+              
+              <li>Bell Peppers</li>
+              
+              <li>Olives</li>
+              
+              <li>Mushrooms</li>
+              
+              <li>Onions</li>
+              
+            </ul>
+          </div>
 
-        <!-- Allergens -->
-        
-        <div class="mt-4 pt-4 border-t border-gray-200">
-          <p class="text-sm text-gray-500">
-            <span class="font-bold">Allergènes:</span>
-            Dairy
-          </p>
+          <!-- Allergens -->
+          
+          <div class="mt-4 pt-4 border-t border-gray-200">
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Allergènes:</span>
+              Dairy
+            </p>
+          </div>
+          
         </div>
-        
       </div>
     </div>
     
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in flex flex-col h-full">
       <!-- Add Pizza Image -->
       <div class="w-full h-48 overflow-hidden">
         <picture><source type="image/webp" srcset="/img/-AJUaJaGBr-400.webp 400w" sizes="400px"><img src="/img/-AJUaJaGBr-400.jpg" alt="Hawaiian" loading="lazy" decoding="async" class="w-full h-full object-cover" width="400" height="266"></picture>
       </div>
-      <div class="p-6">
+      <div class="p-6 flex flex-col flex-1">
         <!-- Pizza Name -->
         <h3 class="text-2xl font-bowlby text-vertAccent mb-4">
           Hawaiian
@@ -272,40 +284,43 @@
           
         </h3>
 
-        <!-- Ingredients -->
-        <div class="space-y-2">
-          <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
-          <ul class="list-disc list-inside space-y-1 text-gray-700">
-            
-            <li>Tomato Sauce</li>
-            
-            <li>Mozzarella</li>
-            
-            <li>Ham</li>
-            
-            <li>Pineapple</li>
-            
-          </ul>
-        </div>
+        <!-- Ingredients & Allergens Container -->
+        <div class="flex flex-col justify-between h-full flex-1">
+          <!-- Ingredients -->
+          <div class="space-y-2">
+            <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
+            <ul class="list-disc list-inside space-y-1 text-gray-700">
+              
+              <li>Tomato Sauce</li>
+              
+              <li>Mozzarella</li>
+              
+              <li>Ham</li>
+              
+              <li>Pineapple</li>
+              
+            </ul>
+          </div>
 
-        <!-- Allergens -->
-        
-        <div class="mt-4 pt-4 border-t border-gray-200">
-          <p class="text-sm text-gray-500">
-            <span class="font-bold">Allergènes:</span>
-            Dairy
-          </p>
+          <!-- Allergens -->
+          
+          <div class="mt-4 pt-4 border-t border-gray-200">
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Allergènes:</span>
+              Dairy
+            </p>
+          </div>
+          
         </div>
-        
       </div>
     </div>
     
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in flex flex-col h-full">
       <!-- Add Pizza Image -->
       <div class="w-full h-48 overflow-hidden">
         <picture><source type="image/webp" srcset="/img/czYPCsCxcs-400.webp 400w" sizes="400px"><img src="/img/czYPCsCxcs-400.jpg" alt="Meat Lovers" loading="lazy" decoding="async" class="w-full h-full object-cover" width="400" height="266"></picture>
       </div>
-      <div class="p-6">
+      <div class="p-6 flex flex-col flex-1">
         <!-- Pizza Name -->
         <h3 class="text-2xl font-bowlby text-vertAccent mb-4">
           Meat Lovers
@@ -316,119 +331,128 @@
           
         </h3>
 
-        <!-- Ingredients -->
-        <div class="space-y-2">
-          <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
-          <ul class="list-disc list-inside space-y-1 text-gray-700">
-            
-            <li>Tomato Sauce</li>
-            
-            <li>Mozzarella</li>
-            
-            <li>Pepperoni</li>
-            
-            <li>Sausage</li>
-            
-            <li>Bacon</li>
-            
-            <li>Ham</li>
-            
-          </ul>
-        </div>
+        <!-- Ingredients & Allergens Container -->
+        <div class="flex flex-col justify-between h-full flex-1">
+          <!-- Ingredients -->
+          <div class="space-y-2">
+            <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
+            <ul class="list-disc list-inside space-y-1 text-gray-700">
+              
+              <li>Tomato Sauce</li>
+              
+              <li>Mozzarella</li>
+              
+              <li>Pepperoni</li>
+              
+              <li>Sausage</li>
+              
+              <li>Bacon</li>
+              
+              <li>Ham</li>
+              
+            </ul>
+          </div>
 
-        <!-- Allergens -->
-        
-        <div class="mt-4 pt-4 border-t border-gray-200">
-          <p class="text-sm text-gray-500">
-            <span class="font-bold">Allergènes:</span>
-            Dairy
-          </p>
+          <!-- Allergens -->
+          
+          <div class="mt-4 pt-4 border-t border-gray-200">
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Allergènes:</span>
+              Dairy
+            </p>
+          </div>
+          
         </div>
-        
       </div>
     </div>
     
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in flex flex-col h-full">
       <!-- Add Pizza Image -->
       <div class="w-full h-48 overflow-hidden">
         <picture><source type="image/webp" srcset="/img/zOiBEp2N6y-400.webp 400w" sizes="400px"><img src="/img/zOiBEp2N6y-400.jpg" alt="Four Cheese" loading="lazy" decoding="async" class="w-full h-full object-cover" width="400" height="266"></picture>
       </div>
-      <div class="p-6">
+      <div class="p-6 flex flex-col flex-1">
         <!-- Pizza Name -->
         <h3 class="text-2xl font-bowlby text-vertAccent mb-4">
           Four Cheese
           
         </h3>
 
-        <!-- Ingredients -->
-        <div class="space-y-2">
-          <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
-          <ul class="list-disc list-inside space-y-1 text-gray-700">
-            
-            <li>White Sauce</li>
-            
-            <li>Mozzarella</li>
-            
-            <li>Parmesan</li>
-            
-            <li>Cheddar</li>
-            
-            <li>Gorgonzola</li>
-            
-          </ul>
-        </div>
+        <!-- Ingredients & Allergens Container -->
+        <div class="flex flex-col justify-between h-full flex-1">
+          <!-- Ingredients -->
+          <div class="space-y-2">
+            <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
+            <ul class="list-disc list-inside space-y-1 text-gray-700">
+              
+              <li>White Sauce</li>
+              
+              <li>Mozzarella</li>
+              
+              <li>Parmesan</li>
+              
+              <li>Cheddar</li>
+              
+              <li>Gorgonzola</li>
+              
+            </ul>
+          </div>
 
-        <!-- Allergens -->
-        
-        <div class="mt-4 pt-4 border-t border-gray-200">
-          <p class="text-sm text-gray-500">
-            <span class="font-bold">Allergènes:</span>
-            Dairy
-          </p>
+          <!-- Allergens -->
+          
+          <div class="mt-4 pt-4 border-t border-gray-200">
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Allergènes:</span>
+              Dairy
+            </p>
+          </div>
+          
         </div>
-        
       </div>
     </div>
     
-    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in">
+    <div class="bg-white rounded-lg shadow-lg overflow-hidden fade-in flex flex-col h-full">
       <!-- Add Pizza Image -->
       <div class="w-full h-48 overflow-hidden">
         <picture><source type="image/webp" srcset="/img/lJT7xyCXrT-400.webp 400w" sizes="400px"><img src="/img/lJT7xyCXrT-400.jpg" alt="Spicy Jalapeño" loading="lazy" decoding="async" class="w-full h-full object-cover" width="400" height="266"></picture>
       </div>
-      <div class="p-6">
+      <div class="p-6 flex flex-col flex-1">
         <!-- Pizza Name -->
         <h3 class="text-2xl font-bowlby text-vertAccent mb-4">
           Spicy Jalapeño
           
         </h3>
 
-        <!-- Ingredients -->
-        <div class="space-y-2">
-          <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
-          <ul class="list-disc list-inside space-y-1 text-gray-700">
-            
-            <li>Tomato Sauce</li>
-            
-            <li>Mozzarella</li>
-            
-            <li>Jalapeños</li>
-            
-            <li>Pepperoni</li>
-            
-            <li>Chili Flakes</li>
-            
-          </ul>
-        </div>
+        <!-- Ingredients & Allergens Container -->
+        <div class="flex flex-col justify-between h-full flex-1">
+          <!-- Ingredients -->
+          <div class="space-y-2">
+            <p class="text-gray-600 font-bold mb-2">Ingrédients:</p>
+            <ul class="list-disc list-inside space-y-1 text-gray-700">
+              
+              <li>Tomato Sauce</li>
+              
+              <li>Mozzarella</li>
+              
+              <li>Jalapeños</li>
+              
+              <li>Pepperoni</li>
+              
+              <li>Chili Flakes</li>
+              
+            </ul>
+          </div>
 
-        <!-- Allergens -->
-        
-        <div class="mt-4 pt-4 border-t border-gray-200">
-          <p class="text-sm text-gray-500">
-            <span class="font-bold">Allergènes:</span>
-            Dairy
-          </p>
+          <!-- Allergens -->
+          
+          <div class="mt-4 pt-4 border-t border-gray-200">
+            <p class="text-sm text-gray-500">
+              <span class="font-bold">Allergènes:</span>
+              Dairy
+            </p>
+          </div>
+          
         </div>
-        
       </div>
     </div>
     
