@@ -1,103 +1,204 @@
 [
   {
-    "name": "Margherita",
-    "ingredients": ["Tomato Sauce", "Mozzarella", "Basil"],
-    "topSell": true,
-    "allergen": ["Dairy"],
-    "slug": "margherita",
-    "rank": 1,
-    "image": "/pizza/margherita.png"
-  },
-  {
-    "name": "Pepperoni",
-    "ingredients": ["Tomato Sauce", "Mozzarella", "Pepperoni"],
-    "topSell": true,
-    "allergen": ["Dairy"],
-    "slug": "pepperoni",
-    "rank": 2,
-    "image": "/pizza/pepperoni.png"
-  },
-  {
-    "name": "BBQ Chicken",
+    "name": "OG Pepperoni",
     "ingredients": [
-      "Tomato Sauce",
-      "BBQ Sauce",
+      "Sauce tomate",
       "Mozzarella",
-      "Chicken",
-      "Red Onions",
-      "Cilantro"
-    ],
-    "topSell": true,
-    "allergen": ["Dairy"],
-    "slug": "bbq-chicken",
-    "rank": 3,
-    "image": "/pizza/bbq-chicken.png"
-  },
-  {
-    "name": "Veggie Supreme",
-    "ingredients": [
-      "Tomato Sauce",
-      "Mozzarella",
-      "Bell Peppers",
-      "Olives",
-      "Mushrooms",
-      "Onions"
-    ],
-    "topSell": false,
-    "allergen": ["Dairy"],
-    "slug": "veggie-supreme",
-    "rank": 6,
-    "image": "/pizza/veggie-supreme.png"
-  },
-  {
-    "name": "Hawaiian",
-    "ingredients": ["Tomato Sauce", "Mozzarella", "Ham", "Pineapple"],
-    "topSell": true,
-    "allergen": ["Dairy"],
-    "rank": 4,
-    "image": "/pizza/hawaiian.png"
-  },
-  {
-    "name": "Meat Lovers",
-    "ingredients": [
-      "Tomato Sauce",
-      "Mozzarella",
-      "Pepperoni",
-      "Sausage",
-      "Bacon",
-      "Ham"
-    ],
-    "topSell": true,
-    "allergen": ["Dairy"],
-    "rank": 5,
-    "image": "/pizza/meat-lovers.png"
-  },
-  {
-    "name": "Four Cheese",
-    "ingredients": [
-      "White Sauce",
-      "Mozzarella",
-      "Parmesan",
       "Cheddar",
-      "Gorgonzola"
+      "Double pepperoni",
+      "Sauce blanche",
+      "Cébette",
+      "Miel piquant",
+      "Parmesan"
     ],
-    "topSell": false,
-    "allergen": ["Dairy"],
-    "rank": 7,
-    "image": "/pizza/four-cheese.png"
+    "topSell": true,
+    "description": "La classique généreuse : double pepperoni, mozzarella & cheddar, avec miel piquant, cébette et parmesan.",
+    "slug": "og-pepperoni",
+    "rank": 1,
+    "image": "/pizza/og-pepperoni.png"
   },
   {
-    "name": "Spicy Jalapeño",
+    "name": "La Mer",
     "ingredients": [
-      "Tomato Sauce",
+      "Sauce tomate",
       "Mozzarella",
-      "Jalapeños",
-      "Pepperoni",
-      "Chili Flakes"
+      "Cheddar",
+      "Crevettes au beurre persillé",
+      "Tomates cerises",
+      "Vinaigrette tomate séchée",
+      "Ciboule",
+      "Zeste de citron"
     ],
+    "description": "Crevettes au beurre persillé & tomates cerises, relevées d’une vinaigrette tomate séchée et de ciboule.",
     "topSell": false,
-    "allergen": ["Dairy"],
+    "slug": "la-mer",
+    "rank": 2,
+    "image": "/pizza/la-mer.png"
+  },
+  {
+    "name": "Végé",
+    "ingredients": [
+      "Sauce tomate",
+      "Mozzarella",
+      "Cheddar",
+      "Aubergines grillées",
+      "Tomates cerises",
+      "Roquette",
+      "Sauce blanche",
+      "Vinaigrette tomate séchée"
+    ],
+    "description": "Aubergines grillées & tomates cerises, surmontées de roquette fraîche et d’un duo sauce blanche & vinaigrette tomate séchée.",
+    "topSell": false,
+    "slug": "vege",
+    "rank": 3,
+    "image": "/pizza/vege.png"
+  },
+  {
+    "name": "Bambina",
+    "ingredients": [
+      "Sauce tomate",
+      "Mozzarella",
+      "Cheddar",
+      "Jambon cotto",
+      "Champignons hachés",
+      "Sauce blanche douce"
+    ],
+    "description": "Notre enfance : jambon, champignons hachés et un filet de sauce blanche douce.",
+    "topSell": false,
+    "slug": "bambina",
+    "rank": 4,
+    "image": "/pizza/bambina.png"
+  },
+  {
+    "name": "L’Italienne",
+    "ingredients": [
+      "Sauce tomate",
+      "Mozzarella",
+      "Cheddar",
+      "Oignons doux",
+      "Prosciutto cotto",
+      "Roquette",
+      "Huile d’olive",
+      "Pesto",
+      "Burrata",
+      "Copeaux de parmesan"
+    ],
+    "description": "Chèvre fondant, tomates cerises & oignons doux, sublimés par miel et roquette fraîche.",
+    "topSell": true,
+    "slug": "l-italienne",
+    "rank": 5,
+    "image": "/pizza/l-italienne.png"
+  },
+  {
+    "name": "L’Ancienne",
+    "ingredients": [
+      "Sauce blanche",
+      "Moutarde à l’ancienne",
+      "Champignons hachés",
+      "Ail frais",
+      "Lardons",
+      "Bacon croustillant",
+      "Parmesan",
+      "Comté",
+      "Persil frais"
+    ],
+    "description": "Champignons, ail frais, lardons & bacon crispy sur une base moutarde à l’ancienne, le tout relevé de parmesan et persil.",
+    "topSell": false,
+    "slug": "l-ancienne",
+    "rank": 6,
+    "image": "/pizza/l-ancienne.png"
+  },
+  {
+    "name": "La Fromage",
+    "ingredients": [
+      "Sauce blanche",
+      "Mozzarella",
+      "Cheddar",
+      "Taleggio",
+      "Gorgonzola",
+      "Parmesan",
+      "Noix torréfiées concassées",
+      "Miel"
+    ],
+    "description": "Explosion crémeuse avec mozza, cheddar, taleggio, gorgonzola & parmesan, adoucis d’un filet de miel.",
+    "topSell": true,
+    "slug": "la-fromage",
+    "rank": 7,
+    "image": "/pizza/la-fromage.png"
+  },
+  {
+    "name": "L’Indienne",
+    "ingredients": [
+      "Sauce blanche curry",
+      "Mozzarella",
+      "Cheddar",
+      "Poulet tandoori",
+      "Poivrons",
+      "Oignons",
+      "Sauce blanche aïoli douce",
+      "Coriandre fraîche"
+    ],
+    "description": "Poulet tandoori, poivrons & oignons sur une base sauce curry, finalisée avec une sauce aïoli maison et coriandre fraîche.",
+    "topSell": false,
+    "slug": "l-indienne",
     "rank": 8,
-    "image": "/pizza/spicy-jalapeno.png"
+    "image": "/pizza/l-indienne.png"
+  },
+  {
+    "name": "La Chèvre",
+    "ingredients": [
+      "Sauce blanche",
+      "Mozzarella",
+      "Cheddar",
+      "Chèvre en tranches",
+      "Tomates cerises rôties",
+      "Oignons rouges doux",
+      "Miel",
+      "Roquette fraîche"
+    ],
+    "description": "Chèvre fondant, tomates cerises & oignons doux, sublimés par miel et roquette fraîche.",
+    "topSell": false,
+    "slug": "la-chevre",
+    "rank": 9,
+    "image": "/pizza/la-chevre.png"
+  },
+  {
+    "name": "Detroit Burger (Street US)",
+    "ingredients": [
+      "Sauce blanche",
+      "Moutarde",
+      "Mozzarella",
+      "Cheddar",
+      "Cheddar burger",
+      "Bœuf haché assaisonné",
+      "Oignons rouges",
+      "Pickles aigre-doux",
+      "Sauce burger maison",
+      "Iceberg ciselée"
+    ],
+    "description": "Bœuf haché assaisonné, cheddar burger & mozza, avec pickles, iceberg ciselée et sauce burger maison.",
+    "topSell": true,
+    "slug": "Detroit-Burger",
+    "rank": 10,
+    "image": "/pizza/detroit-burger.png"
+  },
+  {
+    "name": "Pulled Pork BBQ",
+    "ingredients": [
+      "Sauce tomate",
+      "Sauce BBQ",
+      "Mozzarella",
+      "Cheddar",
+      "Raclette",
+      "Parmesan",
+      "Pulled pork sauce BBQ",
+      "Oignons",
+      "Aïoli maison persillé"
+    ],
+    "description": "Pulled pork mijoté BBQ, fromage fondant & oignons, finalisé par une sauce aïoli maison.",
+    "topSell": true,
+    "slug": "pulled-pork-bbq",
+    "rank": 11,
+    "image": "/pizza/pulled-pork-bbq.png"
   }
 ]
