@@ -5,15 +5,30 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="{{ description }}">
   <title>{{ title }}</title>
+  <link rel="canonical" href="https://313pizza.fr{{ page.url | url }}">
+  <meta property="og:title" content="{{ title }}">
+  <meta property="og:description" content="{{ description }}">
+  <meta property="og:image" content="{{ image or '/img/pizza_hero.png' }}">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://313pizza.fr{{ page.url | url }}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{ title }}">
+  <meta name="twitter:description" content="{{ description }}">
+  <meta name="twitter:image" content="{{ image or '/img/pizza_hero.png' }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Black+Han+Sans&family=Bowlby+One&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="preconnect" rel="stylesheet">
   <link href="/css/styles.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/tailwind.css">
   <link href="https://cdn.jsdelivr.net/npm/flowbite@3.1.2/dist/flowbite.min.css" rel="preconnect" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="/img/favicon.ico">
 </head>
 <body class="bg-bgColor">
- <script src="/js/main.js"></script>
+   <script src="/js/main.js"></script>
+  <div class="w-full bg-orange text-white text-center py-2 px-4 text-sm font-semibold">
+    Commandez sur place ou sur notre site dédié&nbsp;: 
+    <a href="https://dsp313.hiboutik.com/food/" class="underline hover:text-vertAccent" target="_blank" rel="noopener">Commander en ligne</a>
+  </div>
   <header>
     {% include "components/navbar.njk" %}
   </header>
