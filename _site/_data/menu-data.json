@@ -18,7 +18,7 @@
     "image": "/pizza/og-pepperoni.png"
   },
   {
-    "name": "La Mer",
+    "name": "Coral Bay",
     "ingredients": [
       "Sauce tomate",
       "Mozzarella",
@@ -117,7 +117,6 @@
       "Taleggio",
       "Gorgonzola",
       "Parmesan",
-      "Noix torréfiées concassées",
       "Miel"
     ],
     "description": "Explosion crémeuse avec mozza, cheddar, taleggio, gorgonzola & parmesan, adoucis d’un filet de miel.",
@@ -145,13 +144,13 @@
     "image": "/pizza/l-indienne.png"
   },
   {
-    "name": "La Chèvre",
+    "name": "La Goat",
     "ingredients": [
       "Sauce blanche",
       "Mozzarella",
       "Cheddar",
       "Chèvre en tranches",
-      "Tomates cerises rôties",
+      "Tomates cerises",
       "Oignons rouges doux",
       "Miel",
       "Roquette fraîche"
