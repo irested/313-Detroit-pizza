@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://313pizza.fr/sitemap.xml
