@@ -3,7 +3,7 @@ const fs = require("fs");
 // Pas besoin de require("node-fetch") avec Node.js v18+
 
 const API_URL = "https://demoapi.hiboutik.com/api/products";
-const TOKEN = "8RTJKTGIEYFMT8XUS6XUE8MR8JDGM5ROFSR"; // Remplace par ton token API
+const TOKEN = ""; // Remplace par ton token API
 
 async function fetchProducts() {
   const response = await fetch(API_URL, {
