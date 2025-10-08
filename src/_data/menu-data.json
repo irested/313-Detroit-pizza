@@ -135,7 +135,7 @@
       "Coriandre fraîche"
     ],
     "description": "Poulet tandoori, poivrons & oignons sur une base sauce curry, finalisée avec une sauce aïoli maison et coriandre fraîche.",
-    "topSell": false,
+    "topSell": true,
     "slug": "l-indienne",
     "rank": 8,
     "image": "/pizza/l-indienne.png"
@@ -191,7 +191,7 @@
       "Aïoli maison persillé"
     ],
     "description": "Pulled pork mijoté BBQ, fromage fondant & oignons, finalisé par une sauce aïoli maison.",
-    "topSell": true,
+    "topSell": false,
     "slug": "pulled-pork-bbq",
     "rank": 11,
     "image": "/pizza/pulled-pork-bbq.png"
