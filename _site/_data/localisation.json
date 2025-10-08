@@ -35,9 +35,9 @@
   {
     "day": "Vendredi",
     "place": "Ferrière-la-petite",
-    "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=4.018025%2C50.236594%2C4.022025%2C50.240594&layer=mapnik&marker=50.238594%2C4.020025&zoom=18",
-    "lat": "50.238594",
-    "lon": "4.020025",
+    "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=4.015128%2C50.237845%2C4.019128%2C50.241845&layer=mapnik&marker=50.239845%2C4.017128&zoom=18",
+    "lat": "50.239845",
+    "lon": "4.015128",
     "dayNumber": 5
   },
   {

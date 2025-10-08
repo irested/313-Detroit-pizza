@@ -12,7 +12,7 @@
       "Parmesan"
     ],
     "topSell": true,
-    "description": "La classique généreuse : double pepperoni, mozzarella & cheddar, avec miel piquant, cébette et parmesan.",
+    "description": "La classique généreuse : double pepperoni, mozzarella & cheddar, avec miel piquant ou doux, cébette et parmesan.",
     "slug": "og-pepperoni",
     "rank": 1,
     "image": "/pizza/og-pepperoni.png"
@@ -26,8 +26,7 @@
       "Crevettes au beurre persillé",
       "Tomates cerises",
       "Vinaigrette tomate séchée",
-      "Ciboule",
-      "Zeste de citron"
+      "Ciboule"
     ],
     "description": "Crevettes au beurre persillé & tomates cerises, relevées d’une vinaigrette tomate séchée et de ciboule.",
     "topSell": false,
@@ -61,9 +60,9 @@
       "Cheddar",
       "Jambon cotto",
       "Champignons hachés",
-      "Sauce blanche douce"
+      "Sauce blanche"
     ],
-    "description": "Notre enfance : jambon, champignons hachés et un filet de sauce blanche douce.",
+    "description": "Notre enfance : Jambon (Prosciutto Cotto), champignons hachés et un filet de sauce blanche.",
     "topSell": false,
     "slug": "bambina",
     "rank": 4,
@@ -79,11 +78,9 @@
       "Prosciutto cotto",
       "Roquette",
       "Huile d’olive",
-      "Pesto",
-      "Burrata",
-      "Copeaux de parmesan"
+      "Burrata"
     ],
-    "description": "Chèvre fondant, tomates cerises & oignons doux, sublimés par miel et roquette fraîche.",
+    "description": "Jambon (Prosciutto Cotto), oignons, sublimés par miel et roquette fraîche. Et pour plus de gourmandise, une burrata fondante en supplément.",
     "topSell": true,
     "slug": "l-italienne",
     "rank": 5,
@@ -102,7 +99,7 @@
       "Comté",
       "Persil frais"
     ],
-    "description": "Champignons, ail frais, lardons & bacon crispy sur une base moutarde à l’ancienne, le tout relevé de parmesan et persil.",
+    "description": "Champignons, ail frais, Lard fumé sur une base moutarde à l’ancienne, le tout relevé de parmesan et persil.",
     "topSell": false,
     "slug": "l-ancienne",
     "rank": 6,
@@ -168,14 +165,13 @@
       "Moutarde",
       "Mozzarella",
       "Cheddar",
-      "Cheddar burger",
       "Bœuf haché assaisonné",
       "Oignons rouges",
       "Pickles aigre-doux",
       "Sauce burger maison",
       "Iceberg ciselée"
     ],
-    "description": "Bœuf haché assaisonné, cheddar burger & mozza, avec pickles, iceberg ciselée et sauce burger maison.",
+    "description": "Bœuf haché assaisonné, cheddar & mozza, avec pickles, iceberg ciselée et sauce burger maison.",
     "topSell": true,
     "slug": "Detroit-Burger",
     "rank": 10,

@@ -24,7 +24,7 @@
               <tr data-day="{{ loc.dayNumber }}" data-lat="{{ loc.lat }}" data-lon="{{ loc.lon }}" data-map-url="{{ loc.mapUrl }}">
                 <td class="py-5 px-4 text-base lg:text-lg">{{ loc.day }}</td>
                 <td class="py-5 px-4 text-base lg:text-lg">{{ loc.place }}</td>
-                <td class="py-5 px-4 text-base lg:text-lg">{% if loc.closed %}Fermé{% else %}17h45 - 21h30{% endif %}</td>
+                <td class="py-5 px-4 text-base lg:text-lg">{% if loc.closed %}Fermé{% else %}17h45 - 21h00{% endif %}</td>
               </tr>
             {% endfor %}
           </tbody>
