@@ -62,7 +62,7 @@
       "Champignons hachés",
       "Sauce blanche"
     ],
-    "description": "Notre enfance : Jambon (Prosciutto Cotto), champignons hachés et un filet de sauce blanche.",
+    "description": "Notre enfance : Jambon, champignons hachés et un filet de sauce blanche.",
     "topSell": false,
     "slug": "bambina",
     "rank": 4,
@@ -99,7 +99,7 @@
       "Comté",
       "Persil frais"
     ],
-    "description": "Champignons, ail frais, Lard fumé sur une base moutarde à l’ancienne, le tout relevé de parmesan et persil.",
+    "description": "Champignons, Lard fumé sur une base moutarde à l’ancienne, le tout relevé de parmesan et persil.",
     "topSell": false,
     "slug": "l-ancienne",
     "rank": 6,
@@ -176,24 +176,5 @@
     "slug": "Detroit-Burger",
     "rank": 10,
     "image": "/pizza/detroit-burger.png"
-  },
-  {
-    "name": "Pulled Pork BBQ",
-    "ingredients": [
-      "Sauce tomate",
-      "Sauce BBQ",
-      "Mozzarella",
-      "Cheddar",
-      "Raclette",
-      "Parmesan",
-      "Pulled pork sauce BBQ",
-      "Oignons",
-      "Aïoli maison persillé"
-    ],
-    "description": "Pulled pork mijoté BBQ, fromage fondant & oignons, finalisé par une sauce aïoli maison.",
-    "topSell": false,
-    "slug": "pulled-pork-bbq",
-    "rank": 11,
-    "image": "/pizza/pulled-pork-bbq.png"
   }
 ]
