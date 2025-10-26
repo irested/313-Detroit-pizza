@@ -466,7 +466,8 @@
         <button type="button" class="site-popup-close" aria-label="Fermer le popup">
           <span aria-hidden="true" class="site-popup-close-char">&times;</span>
         </button>
-        <a href="https://dsp313.hiboutik.com/food/" class="site-popup-link" title="Aller au menu">
+
+        <a href="/menu/" class="site-popup-link" title="Aller au menu">
             <picture><source type="image/webp" srcset="/img/XbunvsdZpJ-600.webp 600w" sizes="(min-width: 720px) 600px, 90vw"><img src="/img/XbunvsdZpJ-600.png" alt="Promotion" loading="lazy" decoding="async" class="site-popup-image" width="600" height="683"></picture>
         </a>
     </div>
@@ -536,21 +537,87 @@
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
-  var overlay = document.getElementById('site-popup-overlay');
+  var OVERLAY_ID = 'site-popup-overlay';
+  var STORAGE_KEY = 'sitePopupClosedUntil';
+  var HIDE_MS = 24 * 60 * 60 * 1000; // 24 heures
+
+  var overlay = document.getElementById(OVERLAY_ID);
   if (!overlay) return;
 
-  // Affiche simplement le popup (l'image est rendue par Eleventy au build)
-  overlay.style.display = 'flex';
-  overlay.setAttribute('aria-hidden', 'false');
+  function getStoredUntil() {
+    try {
+      var v = localStorage.getItem(STORAGE_KEY);
+      return v ? parseInt(v, 10) : 0;
+    } catch (e) {
+      return 0;
+    }
+  }
 
-  var closeBtn = overlay.querySelector('.site-popup-close');
-  if (closeBtn) closeBtn.addEventListener('click', function (e) { e.stopPropagation(); closePopup(); });
-  overlay.addEventListener('click', function (e) { if (e.target === overlay) closePopup(); });
+  function setStoredUntil(msFromNow) {
+    try {
+      var until = Date.now() + msFromNow;
+      localStorage.setItem(STORAGE_KEY, String(until));
+      // Fallback cookie (uncomment si tu veux cookies au lieu de localStorage)
+      // var d = new Date(until); document.cookie = "site_popup_closed_until=" + d.toUTCString() + "; path=/; SameSite=Lax";
+    } catch (e) {
+      // ignore
+    }
+  }
+
+  function shouldShow() {
+    var until = getStoredUntil();
+    return !(until && until > Date.now());
+  }
+
+  function showPopup() {
+    overlay.style.display = 'flex';
+    overlay.setAttribute('aria-hidden', 'false');
+  }
 
   function closePopup() {
     overlay.setAttribute('aria-hidden', 'true');
     overlay.parentNode && overlay.parentNode.removeChild(overlay);
   }
+
+  // If user closed less than 24h ago, don't show
+  if (!shouldShow()) {
+    return;
+  }
+
+  // show
+  showPopup();
+
+  // close button
+  var closeBtn = overlay.querySelector('.site-popup-close');
+  if (closeBtn) {
+    closeBtn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      setStoredUntil(HIDE_MS);
+      closePopup();
+    });
+  }
+
+  // click outside content closes and stores preference
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) {
+      setStoredUntil(HIDE_MS);
+      closePopup();
+    }
+  });
+
+  // if user clicks the link (image) set the preference so it won't reappear on return
+  var link = overlay.querySelector('.site-popup-link');
+  if (link) {
+    link.addEventListener('click', function () {
+      setStoredUntil(HIDE_MS);
+      // allow default navigation
+    });
+  }
+
+  // optional: expose a function to clear the stored preference (useful pour tests)
+  window.clearSitePopupPreference = function () {
+    try { localStorage.removeItem(STORAGE_KEY); } catch (e) {}
+  };
 });
 </script>
 </body>
