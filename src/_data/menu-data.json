@@ -176,5 +176,21 @@
     "slug": "Detroit-Burger",
     "rank": 10,
     "image": "/pizza/detroit-burger.png"
+  },
+  {
+    "name": "La Strega",
+    "ingredients": [
+      "Crème de potiron",
+      "Mozzarella",
+      "Cheddar",
+      "Oignons rouges",
+      "Champignons",
+      "Salame piccante"
+    ],
+    "description": "Une création automnale envoûtante : crème de potiron onctueuse, cheddar et mozza, rehaussée par la chaleur du salame piccante et la douceur des champignons et oignons rouges.",
+    "topSell": false,
+    "slug": "la-strega",
+    "rank": 11,
+    "image": "/pizza/la-strega.png"
   }
 ]
