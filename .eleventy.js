@@ -6,12 +6,13 @@ async function imageShortcode(
   widths = [400],
   sizes = "100vw",
   className = "",
-  eager = false
+  eager = false,
+  format = null
 ) {
-  // Optimize image processing based on file type and location
+  // Options de base pour l'image
   const imageOptions = {
     widths: [...widths],
-    formats: ["webp", "jpeg"],
+    formats: ["webp", "jpeg"], // Par défaut : webp et jpeg
     outputDir: "./_site/img/",
     urlPath: "/img/",
     svgShortCircuit: true,
@@ -21,14 +22,27 @@ async function imageShortcode(
     },
   };
 
-  // For SVG files, don't process them
+  // Si c'est une image de popup (détectée via le nom de classe) ou si le format PNG est explicitement demandé
+  if (className.includes("site-popup-image") || format === "png") {
+    imageOptions.formats = ["webp", "png"];
+    imageOptions.sharpWebpOptions = {
+      quality: 80,
+      lossless: true,
+      nearLossless: true,
+    };
+    imageOptions.sharpPngOptions = {
+      quality: 90,
+      compressionLevel: 9,
+    };
+  }
+
+  // Pour les SVG, ne pas les traiter
   if (src.toLowerCase().endsWith(".svg")) {
     imageOptions.formats = ["svg"];
     imageOptions.svgShortCircuit = true;
   }
 
   let metadata = await Image(src, imageOptions);
-
   let imageAttributes = {
     alt,
     sizes,

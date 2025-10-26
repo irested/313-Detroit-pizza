@@ -1,0 +1,94 @@
+{%- if page.url === "/" -%}
+<div id="site-popup-overlay" class="site-popup-overlay" aria-hidden="true" role="dialog" aria-label="Promotion">
+    <div class="site-popup">
+        <button type="button" class="site-popup-close" aria-label="Fermer le popup">
+          <span aria-hidden="true" class="site-popup-close-char">&times;</span>
+        </button>
+        <a href="https://dsp313.hiboutik.com/food/" class="site-popup-link" title="Aller au menu">
+            {% image "./src/img/popup.png", "Promotion", [600], "(min-width: 720px) 600px, 90vw", "site-popup-image", false, ["webp", "png"] %}
+        </a>
+    </div>
+</div>
+
+<style>
+/* Popup basic styles */
+.site-popup-overlay {
+  display: none; /* shown by JS on load */
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+}
+
+.site-popup {
+  position: relative;
+  max-width: 90vw;
+  max-height: 90vh;
+  overflow: hidden;
+  background: transparent;  /* Changed from #fff to transparent */
+}
+
+.site-popup-image {
+  display: block;
+  width: 100%;
+  height: auto;
+  cursor: pointer;
+  max-height: 80vh;
+  object-fit: contain;
+  background: transparent;  /* Added this line */
+}
+
+/* Close button top-right */
+.site-popup-close {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  font-size: 20px;
+  display: block;            /* utilise block plutôt que inline-flex */
+  text-align: center;        /* centre horizontalement le contenu */
+  line-height: 40px;         /* centre verticalement le caractère × */
+  padding: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+.site-popup-close:focus { outline: 2px solid rgba(255,255,255,0.9); }
+
+.site-popup-close-char {
+  display: inline-block;
+  line-height: normal;       /* laisse l'icône utiliser sa taille normale */
+  transform: translateY(0); /* évite décalage sur certaines polices */
+}
+@media (min-width: 720px) {
+  .site-popup { max-width: 600px; }
+}
+</style>
+
+<script>
+document.addEventListener('DOMContentLoaded', function () {
+  var overlay = document.getElementById('site-popup-overlay');
+  if (!overlay) return;
+
+  // Affiche simplement le popup (l'image est rendue par Eleventy au build)
+  overlay.style.display = 'flex';
+  overlay.setAttribute('aria-hidden', 'false');
+
+  var closeBtn = overlay.querySelector('.site-popup-close');
+  if (closeBtn) closeBtn.addEventListener('click', function (e) { e.stopPropagation(); closePopup(); });
+  overlay.addEventListener('click', function (e) { if (e.target === overlay) closePopup(); });
+
+  function closePopup() {
+    overlay.setAttribute('aria-hidden', 'true');
+    overlay.parentNode && overlay.parentNode.removeChild(overlay);
+  }
+});
+</script>
+{%- endif -%}
