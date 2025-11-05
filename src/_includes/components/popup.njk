@@ -1,4 +1,4 @@
-{%- if page.url === "/" -%}
+{%- if page.url === "/" and site.showPopup -%}
 <div id="site-popup-overlay" class="site-popup-overlay" aria-hidden="true" role="dialog" aria-label="Promotion">
     <div class="site-popup">
         <button type="button" class="site-popup-close" aria-label="Fermer le popup">
