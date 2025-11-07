@@ -178,19 +178,20 @@
     "image": "/pizza/detroit-burger.png"
   },
   {
-    "name": "La Strega",
+    "name": "La Ch'ti Detroit",
     "ingredients": [
-      "Crème de potiron",
+      "Sauce blanche",
       "Mozzarella",
       "Cheddar",
-      "Oignons rouges",
-      "Champignons",
-      "Salame piccante"
+      "Maroilles",
+      "Jambon cotto",
+      "Lard fumé",
+      "Champignons"
     ],
-    "description": "Une création automnale envoûtante : crème de potiron onctueuse, cheddar et mozza, rehaussée par la chaleur du salame piccante et la douceur des champignons et oignons rouges.",
+    "description": "Une escapade dans le Nord : base crémeuse, trio de fromages dont notre emblématique maroilles, jambon & lard fumé, le tout accompagné de champignons frais. Un véritable hommage aux saveurs ch'ti !",
     "topSell": false,
-    "slug": "la-strega",
+    "slug": "la-chti-detroit",
     "rank": 11,
-    "image": "/pizza/la-strega.png"
+    "image": "/pizza/la-chti-detroit.png"
   }
 ]
