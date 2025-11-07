@@ -80,8 +80,8 @@
       "Huile d’olive",
       "Burrata"
     ],
-    "description": "Jambon (Prosciutto Cotto), oignons, sublimés par miel et roquette fraîche. Et pour plus de gourmandise, une burrata fondante en supplément.",
-    "topSell": true,
+    "description": "Jambon (Prosciutto Cotto), oignons, sublimés par de la roquette fraîche. Et pour plus de gourmandise, une burrata fondante en supplément.",
+    "topSell": false,
     "slug": "l-italienne",
     "rank": 5,
     "image": "/pizza/l-italienne.png"
@@ -189,7 +189,7 @@
       "Champignons"
     ],
     "description": "Une escapade dans le Nord : base crémeuse, trio de fromages dont notre emblématique maroilles, jambon & lard fumé, le tout accompagné de champignons frais. Un véritable hommage aux saveurs ch'ti !",
-    "topSell": false,
+    "topSell": true,
     "slug": "la-chti-detroit",
     "rank": 11,
     "image": "/pizza/la-chti-detroit.png"
