@@ -100,7 +100,7 @@
       "Persil frais"
     ],
     "description": "Champignons, Lard fumé sur une base moutarde à l’ancienne, le tout relevé de parmesan et persil.",
-    "topSell": false,
+    "topSell": true,
     "slug": "l-ancienne",
     "rank": 6,
     "image": "/pizza/l-ancienne.png"
@@ -178,20 +178,20 @@
     "image": "/pizza/detroit-burger.png"
   },
   {
-    "name": "La Ch'ti Detroit",
+    "name": "La Detroit Nordic",
     "ingredients": [
       "Sauce blanche",
       "Mozzarella",
       "Cheddar",
-      "Maroilles",
-      "Jambon cotto",
-      "Lard fumé",
-      "Champignons"
+      "Munster ou Chèvre",
+      "Saumon fumé",
+      "Tomates cerises",
+      "Roquette fraîche"
     ],
-    "description": "Une escapade dans le Nord : base crémeuse, trio de fromages dont notre emblématique maroilles, jambon & lard fumé, le tout accompagné de champignons frais. Un véritable hommage aux saveurs ch'ti !",
-    "topSell": true,
-    "slug": "la-chti-detroit",
-    "rank": 11,
-    "image": "/pizza/la-chti-detroit.png"
+    "description": "Base crémeuse, tranches de saumon fumé, trio de fromages dont au choix munster ou chèvre, tomates cerises & roquette fraîche. Une expérience gourmande nordique, disponible seulement ce mois-ci !",
+    "topSell": false,
+    "slug": "la-detroit-nordic",
+    "rank": 13,
+    "image": "/pizza/la-detroit-nordic.png"
   }
 ]
