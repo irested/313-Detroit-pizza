@@ -18,10 +18,10 @@
   },
   {
     "day": "Mercredi",
-    "place": "La longueville",
-    "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=3.854512%2C50.288510%2C3.858512%2C50.292510&layer=mapnik&marker=50.290510%2C3.856512&zoom=18",
-    "lat": "50.290510",
-    "lon": "3.856512",
+    "place": "Fermé",
+    "mapUrl": "",
+    "lat": "",
+    "lon": "",
     "dayNumber": 3
   },
   {
@@ -42,10 +42,10 @@
   },
   {
     "day": "Samedi",
-    "place": "La longueville",
-    "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=3.854512%2C50.288510%2C3.858512%2C50.292510&layer=mapnik&marker=50.290510%2C3.856512&zoom=18",
-    "lat": "50.290510",
-    "lon": "3.856512",
+    "place": "Fermé",
+    "mapUrl": "",
+    "lat": "",
+    "lon": "",
     "dayNumber": 6
   },
   {
