@@ -178,20 +178,19 @@
     "image": "/pizza/detroit-burger.png"
   },
   {
-    "name": "La Detroit Nordic",
+    "name": "La Rustiqua",
     "ingredients": [
       "Sauce blanche",
       "Mozzarella",
-      "Cheddar",
-      "Munster ou Chèvre",
-      "Saumon fumé",
-      "Tomates cerises",
-      "Roquette fraîche"
+      "Purée de pomme de terre maison",
+      "Camembert di bufala",
+      "Oignon rouge",
+      "Speck"
     ],
-    "description": "Base crémeuse, tranches de saumon fumé, trio de fromages dont au choix munster ou chèvre, tomates cerises & roquette fraîche. Une expérience gourmande nordique, disponible seulement ce mois-ci !",
+    "description": "Base crème, mozzarella, purée de pomme de terre maison, camembert di bufala, oignon rouge et speck finement tranché ajouté après cuisson.",
     "topSell": false,
-    "slug": "la-detroit-nordic",
+    "slug": "la-rustiqua",
     "rank": 13,
-    "image": "/pizza/la-detroit-nordic.png"
+    "image": "/pizza/la-rustiqua.png"
   }
 ]
