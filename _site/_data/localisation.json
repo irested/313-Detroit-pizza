@@ -10,12 +10,12 @@
   },
   {
     "day": "Mardi",
-    "place": "Fermé",
-    "mapUrl": "",
-    "lat": "",
-    "lon": "",
+    "place": "Assevent",
+    "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=4.015053%2C50.286423%2C4.019053%2C50.290423&layer=mapnik&marker=50.288423%2C4.017053&zoom=18",
+    "lat": "50.288423",
+    "lon": "4.017053",
     "dayNumber": 2,
-    "closed": true
+    "closed": false
   },
   {
     "day": "Mercredi",

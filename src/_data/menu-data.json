@@ -18,41 +18,6 @@
     "image": "/pizza/og-pepperoni.png"
   },
   {
-    "name": "Coral Bay",
-    "ingredients": [
-      "Sauce tomate",
-      "Mozzarella",
-      "Cheddar",
-      "Crevettes au beurre persillé",
-      "Tomates cerises",
-      "Vinaigrette tomate séchée",
-      "Ciboule"
-    ],
-    "description": "Crevettes au beurre persillé & tomates cerises, relevées d’une vinaigrette tomate séchée et de ciboule.",
-    "topSell": false,
-    "slug": "la-mer",
-    "rank": 2,
-    "image": "/pizza/la-mer.png"
-  },
-  {
-    "name": "Végé",
-    "ingredients": [
-      "Sauce tomate",
-      "Mozzarella",
-      "Cheddar",
-      "Aubergines grillées",
-      "Tomates cerises",
-      "Roquette",
-      "Sauce blanche",
-      "Vinaigrette tomate séchée"
-    ],
-    "description": "Aubergines grillées & tomates cerises, surmontées de roquette fraîche et d’un duo sauce blanche & vinaigrette tomate séchée.",
-    "topSell": false,
-    "slug": "vege",
-    "rank": 3,
-    "image": "/pizza/vege.png"
-  },
-  {
     "name": "Bambina",
     "ingredients": [
       "Sauce tomate",
@@ -65,7 +30,7 @@
     "description": "Notre enfance : Jambon, champignons hachés et un filet de sauce blanche.",
     "topSell": false,
     "slug": "bambina",
-    "rank": 4,
+    "rank": 2,
     "image": "/pizza/bambina.png"
   },
   {
@@ -83,7 +48,7 @@
     "description": "Jambon (Prosciutto Cotto), oignons, sublimés par de la roquette fraîche. Et pour plus de gourmandise, une burrata fondante en supplément.",
     "topSell": false,
     "slug": "l-italienne",
-    "rank": 5,
+    "rank": 3,
     "image": "/pizza/l-italienne.png"
   },
   {
@@ -102,7 +67,7 @@
     "description": "Champignons, Lard fumé sur une base moutarde à l’ancienne, le tout relevé de parmesan et persil.",
     "topSell": true,
     "slug": "l-ancienne",
-    "rank": 6,
+    "rank": 4,
     "image": "/pizza/l-ancienne.png"
   },
   {
@@ -119,7 +84,7 @@
     "description": "Explosion crémeuse avec mozza, cheddar, taleggio, gorgonzola & parmesan, adoucis d’un filet de miel.",
     "topSell": true,
     "slug": "la-fromage",
-    "rank": 7,
+    "rank": 5,
     "image": "/pizza/la-fromage.png"
   },
   {
@@ -137,7 +102,7 @@
     "description": "Poulet tandoori, poivrons & oignons sur une base sauce curry, finalisée avec une sauce aïoli maison et coriandre fraîche.",
     "topSell": true,
     "slug": "l-indienne",
-    "rank": 8,
+    "rank": 6,
     "image": "/pizza/l-indienne.png"
   },
   {
@@ -155,7 +120,7 @@
     "description": "Chèvre fondant, tomates cerises & oignons doux, sublimés par miel et roquette fraîche.",
     "topSell": false,
     "slug": "la-chevre",
-    "rank": 9,
+    "rank": 7,
     "image": "/pizza/la-chevre.png"
   },
   {
@@ -174,23 +139,25 @@
     "description": "Bœuf haché assaisonné, cheddar & mozza, avec pickles, iceberg ciselée et sauce burger maison.",
     "topSell": true,
     "slug": "Detroit-Burger",
-    "rank": 10,
+    "rank": 8,
     "image": "/pizza/detroit-burger.png"
   },
   {
-    "name": "La Rustiqua",
+    "name": "La Sacra",
     "ingredients": [
-      "Sauce blanche",
+      "Sauce tomate",
       "Mozzarella",
-      "Purée de pomme de terre maison",
-      "Camembert di bufala",
-      "Oignon rouge",
-      "Speck"
+      "Fromage Maredsous",
+      "Oignon",
+      "Chair à saucisse au romarin",
+      "Champignons",
+      "Crème cacio e pepe",
+      "Persil frais"
     ],
-    "description": "Base crème, mozzarella, purée de pomme de terre maison, camembert di bufala, oignon rouge et speck finement tranché ajouté après cuisson.",
+    "description": "Base tomate surmontée de mozzarella, fromage Maredsous, oignons blancs, champignons, crème cacio e pepe et en fin de cuisson, un peu de persil.",
     "topSell": false,
-    "slug": "la-rustiqua",
-    "rank": 13,
-    "image": "/pizza/la-rustiqua.png"
+    "slug": "la-sacra",
+    "rank": 9,
+    "image": "/pizza/la-sacra.png"
   }
 ]
