@@ -32,7 +32,8 @@
     "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=4.008010%2C50.304273%2C4.012010%2C50.308273&layer=mapnik&marker=50.306273%2C4.010010&zoom=18",
     "lat": "50.306273",
     "lon": "4.010010",
-    "dayNumber": 4
+    "dayNumber": 4,
+    "closed": false
   },
   {
     "day": "Vendredi",
@@ -40,7 +41,8 @@
     "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=4.015128%2C50.237845%2C4.019128%2C50.241845&layer=mapnik&marker=50.239845%2C4.017128&zoom=18",
     "lat": "50.239845",
     "lon": "4.015128",
-    "dayNumber": 5
+    "dayNumber": 5,
+    "closed": false
   },
   {
     "day": "Samedi",
@@ -48,7 +50,8 @@
     "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=4.010649%2C50.337553%2C4.014649%2C50.341553&layer=mapnik&marker=50.339553%2C4.012649&zoom=18",
     "lat": "50.339553",
     "lon": "4.012649",
-    "dayNumber": 6
+    "dayNumber": 6,
+    "closed": false
   },
   {
     "day": "Dimanche",
@@ -56,6 +59,7 @@
     "mapUrl": "https://www.openstreetmap.org/export/embed.html?bbox=4.073061%2C50.254887%2C4.077061%2C50.258887&layer=mapnik&marker=50.256022%2C4.075091&zoom=18",
     "lat": "50.256022",
     "lon": "4.075091",
-    "dayNumber": 0
+    "dayNumber": 0,
+    "closed": false
   }
 ]
