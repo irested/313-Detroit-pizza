@@ -141,23 +141,5 @@
     "slug": "Detroit-Burger",
     "rank": 8,
     "image": "/pizza/detroit-burger.png"
-  },
-  {
-    "name": "La Sacra",
-    "ingredients": [
-      "Sauce tomate",
-      "Mozzarella",
-      "Fromage Maredsous",
-      "Oignon",
-      "Chair à saucisse au romarin",
-      "Champignons",
-      "Crème cacio e pepe",
-      "Persil frais"
-    ],
-    "description": "Base tomate surmontée de mozzarella, fromage Maredsous, oignons blancs, champignons, crème cacio e pepe et en fin de cuisson, un peu de persil.",
-    "topSell": false,
-    "slug": "la-sacra",
-    "rank": 9,
-    "image": "/pizza/la-sacra.png"
   }
 ]
