@@ -141,5 +141,24 @@
     "slug": "Detroit-Burger",
     "rank": 8,
     "image": "/pizza/detroit-burger.png"
+  },
+  {
+    "name": "Bbq pulled pork",
+    "ingredients": [
+      "Base BBQ",
+      "Cheddar",
+      "Mozzarella",
+      "Pulled pork",
+      "Oignon rouge",
+      "Reblochon",
+      "Sauce aioli",
+      "Ciboulette",
+      "Parmesan"
+    ],
+    "topSell": false,
+    "description": "Pizza du mois : Base BBQ, cheddar, mozzarella, pulled pork, oignon rouge, reblochon, avec un trait de sauce aioli, ciboulette et parmesan.",
+    "slug": "bbq-pulled-pork",
+    "rank": 9,
+    "image": "/pizza/bbq-pulled-pork.png"
   }
 ]
