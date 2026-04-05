@@ -143,22 +143,20 @@
     "image": "/pizza/detroit-burger.png"
   },
   {
-    "name": "Bbq pulled pork",
+    "name": "Mortadella",
     "ingredients": [
-      "Base BBQ",
-      "Cheddar",
+      "Base pesto d'ails des ours",
       "Mozzarella",
-      "Pulled pork",
-      "Oignon rouge",
-      "Reblochon",
-      "Sauce aioli",
-      "Ciboulette",
-      "Parmesan"
+      "Oignon",
+      "Pistache",
+      "Mortadelle",
+      "Ricotta fouettée",
+      "Huile d'olive"
     ],
     "topSell": false,
-    "description": "Pizza du mois : Base BBQ, cheddar, mozzarella, pulled pork, oignon rouge, reblochon, avec un trait de sauce aioli, ciboulette et parmesan.",
-    "slug": "bbq-pulled-pork",
+    "description": "Pizza du mois : Base pesto d'ails des ours, mozzarella, oignon, pistache, mortadelle, ricotta fouettée et filet d'huile d'olive.",
+    "slug": "mortadella",
     "rank": 9,
-    "image": "/pizza/bbq-pulled-pork.png"
+    "image": "/pizza/mortadella.png"
   }
 ]
