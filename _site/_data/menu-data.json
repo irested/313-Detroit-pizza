@@ -143,20 +143,19 @@
     "image": "/pizza/detroit-burger.png"
   },
   {
-    "name": "Mortadella",
+    "name": "La Tokyo",
     "ingredients": [
-      "Base pesto d'ails des ours",
+      "Base curry japonais",
       "Mozzarella",
-      "Oignon",
-      "Pistache",
-      "Mortadelle",
-      "Ricotta fouettée",
-      "Huile d'olive"
+      "Oignons",
+      "Tonkatsu",
+      "Chou émincé cru",
+      "Sauce bulldog"
     ],
     "topSell": false,
-    "description": "Pizza du mois : Base pesto d'ails des ours, mozzarella, oignon, pistache, mortadelle, ricotta fouettée et filet d'huile d'olive.",
-    "slug": "mortadella",
+    "description": "Pizza du mois : Base curry japonais, mozzarella, oignons, tonkatsu, puis après cuisson choux émincé cru et sauce bulldog.",
+    "slug": "la-tokyo",
     "rank": 9,
-    "image": "/pizza/mortadella.png"
+    "image": "/pizza/la-tokyo.png"
   }
 ]
