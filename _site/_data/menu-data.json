@@ -143,19 +143,20 @@
     "image": "/pizza/detroit-burger.png"
   },
   {
-    "name": "La Tokyo",
+    "name": "L'Insulaire",
     "ingredients": [
-      "Base curry japonais",
       "Mozzarella",
-      "Oignons",
-      "Tonkatsu",
-      "Chou émincé cru",
-      "Sauce bulldog"
+      "Chutney de mangue",
+      "Falafel",
+      "Cébette",
+      "Sambol",
+      "Filet de crème",
+      "Coriandre fraîche"
     ],
     "topSell": false,
-    "description": "Pizza du mois : Base curry japonais, mozzarella, oignons, tonkatsu, puis après cuisson choux émincé cru et sauce bulldog.",
-    "slug": "la-tokyo",
+    "description": "Pizza du mois : Mozzarella, chutney de mangue, falafel, cébette, sambol, filet de crème et coriandre fraîche.",
+    "slug": "l-insulaire",
     "rank": 9,
-    "image": "/pizza/la-tokyo.png"
+    "image": "/pizza/l-insulaire.png"
   }
 ]
