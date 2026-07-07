@@ -141,22 +141,5 @@
     "slug": "Detroit-Burger",
     "rank": 8,
     "image": "/pizza/detroit-burger.png"
-  },
-  {
-    "name": "L'Insulaire",
-    "ingredients": [
-      "Mozzarella",
-      "Chutney de mangue",
-      "Falafel",
-      "Cébette",
-      "Sambol",
-      "Filet de crème",
-      "Coriandre fraîche"
-    ],
-    "topSell": false,
-    "description": "Pizza du mois : Mozzarella, chutney de mangue, falafel, cébette, sambol, filet de crème et coriandre fraîche.",
-    "slug": "l-insulaire",
-    "rank": 9,
-    "image": "/pizza/l-insulaire.png"
   }
 ]
