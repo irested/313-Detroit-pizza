@@ -1,25 +1,5 @@
 [
   {
-    "name": "La Pesca",
-    "ingredients": [
-      "Sauce tomate",
-      "Mozzarella",
-      "Cheddar",
-      "Pêche",
-      "Prosciutto crudo",
-      "Oignon",
-      "Ricotta fouettée",
-      "Amandes effilées",
-      "Basilic frais",
-      "Crème de balsamique"
-    ],
-    "description": "Notre Detroit de septembre : sauce tomate, mozzarella, cheddar, pêche, prosciutto crudo et oignon. Après cuisson, ricotta fouettée, amandes effilées, basilic frais et un trait de crème de balsamique.",
-    "topSell": false,
-    "slug": "la-pesca",
-    "rank": 9,
-    "image": "/pizza/la-pesca.jpg"
-  },
-  {
     "name": "OG Pepperoni",
     "ingredients": [
       "Sauce tomate",
