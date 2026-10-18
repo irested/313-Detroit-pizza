@@ -1,23 +1,22 @@
 [
   {
-    "name": "La Pesca",
+    "name": "La Mont d’Or",
     "ingredients": [
-      "Sauce tomate",
+      "Base crème",
       "Mozzarella",
-      "Cheddar",
-      "Pêche",
-      "Prosciutto crudo",
-      "Oignon",
-      "Ricotta fouettée",
-      "Amandes effilées",
-      "Basilic frais",
-      "Crème de balsamique"
+      "Oignon blanc",
+      "Pomme de terre",
+      "Lard",
+      "Mont d’Or",
+      "Vin blanc",
+      "Romarin",
+      "Après cuisson au choix : huile aromatisée à la truffe et aux noix, poivre fraîchement moulu"
     ],
-    "description": "Notre Detroit de septembre : sauce tomate, mozzarella, cheddar, pêche, prosciutto crudo et oignon. Après cuisson, ricotta fouettée, amandes effilées, basilic frais et un trait de crème de balsamique.",
-    "topSell": false,
-    "slug": "la-pesca",
-    "rank": 9,
-    "image": "/pizza/la-pesca.jpg"
+    "description": "Base crème, mozzarella, oignon blanc, pomme de terre et lard, avec du Mont d’Or, un trait de vin blanc et un peu de romarin. Après cuisson, au choix : huile aromatisée à la truffe et aux noix, ainsi que du poivre fraîchement moulu.",
+    "topSell": true,
+    "slug": "la-mont-dor",
+    "rank": 1,
+    "image": "/pizza/la-mont-dor.png"
   },
   {
     "name": "OG Pepperoni",
@@ -34,7 +33,7 @@
     "topSell": true,
     "description": "La classique généreuse : double pepperoni, mozzarella & cheddar, avec miel piquant ou doux, cébette et parmesan.",
     "slug": "og-pepperoni",
-    "rank": 1,
+    "rank": 2,
     "image": "/pizza/og-pepperoni.png"
   },
   {
@@ -50,7 +49,7 @@
     "description": "Notre enfance : Jambon, champignons hachés et un filet de sauce blanche.",
     "topSell": false,
     "slug": "bambina",
-    "rank": 2,
+    "rank": 3,
     "image": "/pizza/bambina.png"
   },
   {
@@ -68,7 +67,7 @@
     "description": "Jambon (Prosciutto Cotto), oignons, sublimés par de la roquette fraîche. Et pour plus de gourmandise, une burrata fondante en supplément.",
     "topSell": false,
     "slug": "l-italienne",
-    "rank": 3,
+    "rank": 4,
     "image": "/pizza/l-italienne.png"
   },
   {
@@ -87,7 +86,7 @@
     "description": "Champignons, Lard fumé sur une base moutarde à l’ancienne, le tout relevé de parmesan et persil.",
     "topSell": false,
     "slug": "l-ancienne",
-    "rank": 4,
+    "rank": 5,
     "image": "/pizza/l-ancienne.png"
   },
   {
@@ -104,7 +103,7 @@
     "description": "Explosion crémeuse avec mozza, cheddar, taleggio, gorgonzola & parmesan, adoucis d’un filet de miel.",
     "topSell": true,
     "slug": "la-fromage",
-    "rank": 5,
+    "rank": 6,
     "image": "/pizza/la-fromage.png"
   },
   {
@@ -120,9 +119,9 @@
       "Coriandre fraîche"
     ],
     "description": "Poulet tandoori, poivrons & oignons sur une base sauce curry, finalisée avec une sauce aïoli maison et coriandre fraîche.",
-    "topSell": true,
+    "topSell": false,
     "slug": "l-indienne",
-    "rank": 6,
+    "rank": 7,
     "image": "/pizza/l-indienne.png"
   },
   {
@@ -140,7 +139,7 @@
     "description": "Chèvre fondant, tomates cerises & oignons doux, sublimés par miel et roquette fraîche.",
     "topSell": true,
     "slug": "la-chevre",
-    "rank": 7,
+    "rank": 8,
     "image": "/pizza/la-chevre.png"
   },
   {
@@ -159,7 +158,7 @@
     "description": "Bœuf haché assaisonné, cheddar & mozza, avec pickles, iceberg ciselée et sauce burger maison.",
     "topSell": true,
     "slug": "Detroit-Burger",
-    "rank": 8,
+    "rank": 9,
     "image": "/pizza/detroit-burger.png"
   }
 ]
