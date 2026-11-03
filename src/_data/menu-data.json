@@ -1,24 +1,5 @@
 [
   {
-    "name": "La Mont d’Or",
-    "ingredients": [
-      "Base crème",
-      "Mozzarella",
-      "Oignon blanc",
-      "Pomme de terre",
-      "Lard",
-      "Mont d’Or",
-      "Vin blanc",
-      "Romarin",
-      "Après cuisson au choix : huile aromatisée à la truffe et aux noix, poivre fraîchement moulu"
-    ],
-    "description": "Base crème, mozzarella, oignon blanc, pomme de terre et lard, avec du Mont d’Or, un trait de vin blanc et un peu de romarin. Après cuisson, au choix : huile aromatisée à la truffe et aux noix, ainsi que du poivre fraîchement moulu.",
-    "topSell": true,
-    "slug": "la-mont-dor",
-    "rank": 1,
-    "image": "/pizza/la-mont-dor.png"
-  },
-  {
     "name": "OG Pepperoni",
     "ingredients": [
       "Sauce tomate",
@@ -84,7 +65,7 @@
       "Persil frais"
     ],
     "description": "Champignons, Lard fumé sur une base moutarde à l’ancienne, le tout relevé de parmesan et persil.",
-    "topSell": false,
+    "topSell": true,
     "slug": "l-ancienne",
     "rank": 5,
     "image": "/pizza/l-ancienne.png"
