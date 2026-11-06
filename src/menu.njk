@@ -32,6 +32,11 @@ eleventyExcludeFromCollections: true
         <!-- Pizza Name -->
         <h2 class="text-2xl font-bowlby text-vertAccent mb-4">
           {{ pizza.name }}
+          {% if pizza.monthlySpecial %}
+          <span class="ml-2 inline-block bg-orange text-white text-sm px-2 py-1 rounded-full">
+            Pizza du mois
+          </span>
+          {% endif %}
           {% if pizza.topSell %}
           <span class="ml-2 inline-block bg-orange text-white text-sm px-2 py-1 rounded-full">
             Populaire

@@ -1,5 +1,22 @@
 [
   {
+    "name": "La Montbéliarde",
+    "ingredients": [
+      "Base crème",
+      "Oignons rouges",
+      "Pommes de terre",
+      "Saucisse de Montbéliard",
+      "Morbier",
+      "Après cuisson : poivre et persil",
+      "En option : sauce moutarde à l’ancienne et miel"
+    ],
+    "description": "Base crème, oignons rouges, pommes de terre, saucisse de Montbéliard et morbier. Après cuisson : poivre et persil. Sauce moutarde à l’ancienne et miel en option.",
+    "topSell": false,
+    "monthlySpecial": true,
+    "rank": 1,
+    "image": "/pizza/la-montbeliarde.png"
+  },
+  {
     "name": "OG Pepperoni",
     "ingredients": [
       "Sauce tomate",
